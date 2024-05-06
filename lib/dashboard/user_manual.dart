@@ -11,7 +11,7 @@ class UserManual extends StatelessWidget {
 }
 
 class ManualContent extends StatelessWidget {
-  const ManualContent({super.key});
+  const ManualContent({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -131,8 +131,8 @@ class GettingStarted extends StatelessWidget {
 class Features extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final TextStyle _textStyle1 = TextStyle(fontSize: 18);
-    final TextStyle _textStyle2 = TextStyle(fontSize: 14);
+    final TextStyle textStyle1 = TextStyle(fontSize: 18);
+    final TextStyle textStyle2 = TextStyle(fontSize: 14);
 
     return Container(
       padding: EdgeInsets.only(top: 0.0, right: 24.0, bottom: 28.0, left: 24.0),
@@ -146,13 +146,121 @@ class Features extends StatelessWidget {
           const SizedBox(height: 10),
           Text(
             'Exam Creation',
-            style: _textStyle1,
+            style: textStyle1,
           ),
           const SizedBox(height: 10),
           Text(
             'RajaMark requires macOS Monterey (macOS 12) or later, Windows 10 or later or Linux.',
-            style: _textStyle2,
+            style: textStyle2,
+          ),
+          SizedBox(height: 20),
+          Text(
+            'Upload Student Answer',
+            style: textStyle1,
+          ),
+          const SizedBox(height: 10),
+          Column(
+            children: [
+              _buildStepWithImage(
+                  '1. Navigate to "Exams” and select the exam you wish to grade.',
+                  'USA1.png'),
+              SizedBox(height: 10),
+              _buildStepWithImage(
+                  '2. In the student column, locate and click the "Add" button to input student data.',
+                  'USA2.png'),
+              SizedBox(height: 10),
+              _buildStepWithImage(
+                  '3. Enter the student\'s ID and name into the designated fields.',
+                  ''),
+              _buildStepWithImage(
+                  '4. Click the "Upload" button to update the student\'s answer sheet.',
+                  'USA3.png'),
+              _buildStepWithImage(
+                  '5. To add the student\'s answer sheet, either drag a file or use the "Choose files" option to select the file from your computer.',
+                  'USA4.png'),
+              SizedBox(height: 10),
+              _buildStepWithImage(
+                  '6. After selecting a file, refer to Image Preprocessing for more details.',
+                  'USA4.png'),
+              SizedBox(height: 10),
+              _buildStepWithImage(
+                  '7. The student\'s details will be displayed on the page for confirmation.',
+                  'USA5.png'),
+              SizedBox(height: 10),
+              _buildStepWithImage(
+                  '8. Repeat steps 2 to 7 to add more students as necessary.',
+                  ''),
+              _buildStepWithImage(
+                  '9. Once you have finished adding all students, click the "Save" button to save the student records.',
+                  ''),
+            ],
+          ),
+          SizedBox(height: 20),
+          Text(
+            'Image Preprocessing',
+            style: textStyle1,
+          ),
+          const SizedBox(height: 10),
+          Column(
+            children: [
+              _buildStepWithImage(
+                  '1. Once a file is selected for upload, the system will begin processing the image.',
+                  'IP1.png'),
+              SizedBox(height: 10),
+              Text(
+                '2. After successful processing, users are required to enter a file name for saving and the author\'s name. (In case of processing failure, refer to Troubleshooting for more info)',
+                style: textStyle2,
+              ),
+              _buildStepWithImage(
+                  '3.  Click on "Extract this file" to initiate OCR processing.',
+                  'IP2.png'),
+              SizedBox(height: 10),
+              _buildStepWithImage(
+                  '4. The system will commence extracting text from the image.',
+                  'IP3.png'),
+              SizedBox(height: 10),
+              _buildStepWithImage(
+                  '5. Upon successful extraction, the extracted text (answers) will be displayed.',
+                  ''),
+              Text(
+                '6. If the extracted data is incorrect, users may request a reupload. Otherwise, proceed to Step 7 of Upload Student Answer if no issues arise.',
+                style: textStyle2,
+              ),
+            ],
+          ),
+          SizedBox(height: 20),
+          Text(
+            'Score Calculation and Reporting',
+            style: textStyle1,
+          ),
+          const SizedBox(height: 10),
+          Text(
+            '1. Navigate to "Exam" and select the eye icon of the exam you wish to view.\n2. Upon uploading students\' answers, the system will automatically calculate the score for each student and calculate the mean and median score of the class. (Refer to Upload Student Answer to know more about uploading student’s answer)\n3. To generate a report, click on the "Generate Report" button. \n4. The report will include statistical measures such as the median, mean, and other relevant statistics.',
+            style: TextStyle(fontSize: 14),
           )
+        ],
+      ),
+    );
+  }
+
+  Widget _buildStepWithImage(String text, String imageName) {
+    return Align(
+      alignment: Alignment.centerLeft,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            text,
+            style: const TextStyle(fontSize: 14),
+            textAlign: TextAlign.justify,
+          ),
+          if (imageName.isNotEmpty)
+            Image.asset(
+              'assets/images/$imageName', // Assuming the images are in the assets folder
+              width: 500,
+              height: 300,
+              fit: BoxFit.contain,
+            ),
         ],
       ),
     );
@@ -201,7 +309,6 @@ class Troubleshooting extends StatelessWidget {
               ),
             ],
           ),
-          
           const SizedBox(height: 20),
           Text(
             'Solutions',
@@ -229,7 +336,6 @@ class Troubleshooting extends StatelessWidget {
               ),
             ],
           ),
-
           const SizedBox(height: 20),
           Text(
             'Support Contact',
@@ -319,195 +425,186 @@ class Glossary extends StatelessWidget {
           Container(
             width: 800,
             child: Table(
-            border: TableBorder.all(),
-            defaultVerticalAlignment: TableCellVerticalAlignment.middle,
-            columnWidths: {
-              0: FlexColumnWidth(0.3),
-            },
-            children: [
-              TableRow(
-                children: [
-                  TableCell(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('Term'),
+              border: TableBorder.all(),
+              defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+              columnWidths: {
+                0: FlexColumnWidth(0.3),
+              },
+              children: [
+                TableRow(
+                  children: [
+                    TableCell(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('Term'),
+                      ),
                     ),
-                  ),
-                  TableCell(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('Definition'),
+                    TableCell(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('Definition'),
+                      ),
                     ),
-                  ),
-                ],
-              ),
-
-              TableRow(
-                children: [
-                  TableCell(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('Optical Character Recognition (OCR)'),
+                  ],
+                ),
+                TableRow(
+                  children: [
+                    TableCell(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('Optical Character Recognition (OCR)'),
+                      ),
                     ),
-                  ),
-                  TableCell(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('The technology used to convert different types of documents, '
-                      'such as scanned paper documents, PDF files, or images captured by a digital camera, into editable and '
-                      'searchable data.')
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'The technology used to convert different types of documents, '
+                              'such as scanned paper documents, PDF files, or images captured by a digital camera, into editable and '
+                              'searchable data.')),
                     ),
-                  ),
-                ],
-              ),
-
-              TableRow(
-                children: [
-                  TableCell(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('Resolution'),
+                  ],
+                ),
+                TableRow(
+                  children: [
+                    TableCell(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('Resolution'),
+                      ),
                     ),
-                  ),
-                  TableCell(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('The level of detail that an image holds. In the context of scanning, it measures the '
-                      'number of pixels per inch (PPI) or dots per inch (DPI) in a digital image.')
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'The level of detail that an image holds. In the context of scanning, it measures the '
+                              'number of pixels per inch (PPI) or dots per inch (DPI) in a digital image.')),
                     ),
-                  ),
-                ],
-              ),
-
-              TableRow(
-                children: [
-                  TableCell(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('Layout'),
+                  ],
+                ),
+                TableRow(
+                  children: [
+                    TableCell(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('Layout'),
+                      ),
                     ),
-                  ),
-                  TableCell(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('The arrangement of text, images, and other elements on a document or webpage.')
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'The arrangement of text, images, and other elements on a document or webpage.')),
                     ),
-                  ),
-                ],
-              ),
-
-              TableRow(
-                children: [
-                  TableCell(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('Handwriting Recognition'),
+                  ],
+                ),
+                TableRow(
+                  children: [
+                    TableCell(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('Handwriting Recognition'),
+                      ),
                     ),
-                  ),
-                  TableCell(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('The process of converting handwritten text into digital text. It involves analyzing '
-                      'and interpreting handwritten characters to recognize and convert them into machine-readable text.')
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'The process of converting handwritten text into digital text. It involves analyzing '
+                              'and interpreting handwritten characters to recognize and convert them into machine-readable text.')),
                     ),
-                  ),
-                ],
-              ),
-
-              TableRow(
-                children: [
-                  TableCell(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('Calibration'),
+                  ],
+                ),
+                TableRow(
+                  children: [
+                    TableCell(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('Calibration'),
+                      ),
                     ),
-                  ),
-                  TableCell(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('The process of adjusting and fine-tuning equipment or software to ensure accuracy and '
-                      'consistency in performance. In the context of scanning, calibration may involve adjusting settings '
-                      'such as brightness, contrast, and color balance to optimize image quality.')
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'The process of adjusting and fine-tuning equipment or software to ensure accuracy and '
+                              'consistency in performance. In the context of scanning, calibration may involve adjusting settings '
+                              'such as brightness, contrast, and color balance to optimize image quality.')),
                     ),
-                  ),
-                ],
-              ),
-
-              TableRow(
-                children: [
-                  TableCell(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('Standardized Format'),
+                  ],
+                ),
+                TableRow(
+                  children: [
+                    TableCell(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('Standardized Format'),
+                      ),
                     ),
-                  ),
-                  TableCell(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('A predefined layout or structure that follows specific guidelines or conventions. '
-                      'In the context of answer sheets, a standardized format ensures consistency in the presentation of '
-                      'questions and answers, facilitating accurate interpretation and grading.')
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'A predefined layout or structure that follows specific guidelines or conventions. '
+                              'In the context of answer sheets, a standardized format ensures consistency in the presentation of '
+                              'questions and answers, facilitating accurate interpretation and grading.')),
                     ),
-                  ),
-                ],
-              ),
-
-              TableRow(
-                children: [
-                  TableCell(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('Alignment'),
+                  ],
+                ),
+                TableRow(
+                  children: [
+                    TableCell(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('Alignment'),
+                      ),
                     ),
-                  ),
-                  TableCell(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('The positioning of text or objects relative to a reference point or line. In the '
-                      'context of OCR, alignment ensures that text is accurately detected and interpreted within '
-                      'predefined boundaries or regions.')
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'The positioning of text or objects relative to a reference point or line. In the '
+                              'context of OCR, alignment ensures that text is accurately detected and interpreted within '
+                              'predefined boundaries or regions.')),
                     ),
-                  ),
-                ],
-              ),
-
-              TableRow(
-                children: [
-                  TableCell(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('Noise'),
+                  ],
+                ),
+                TableRow(
+                  children: [
+                    TableCell(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('Noise'),
+                      ),
                     ),
-                  ),
-                  TableCell(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('Random variations or interference in an image that can degrade quality and affect '
-                      'OCR accuracy.')
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'Random variations or interference in an image that can degrade quality and affect '
+                              'OCR accuracy.')),
                     ),
-                  ),
-                ],
-              ),
-
-              TableRow(
-                children: [
-                  TableCell(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('Preprocessing'),
+                  ],
+                ),
+                TableRow(
+                  children: [
+                    TableCell(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('Preprocessing'),
+                      ),
                     ),
-                  ),
-                  TableCell(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('The process of applying various techniques to raw data, such as images or text, to '
-                      'improve quality, enhance features, or prepare it for further analysis.')
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'The process of applying various techniques to raw data, such as images or text, to '
+                              'improve quality, enhance features, or prepare it for further analysis.')),
                     ),
-                  ),
-                ],
-              ),
-            ],
-          ),
+                  ],
+                ),
+              ],
+            ),
           )
         ],
       ),
@@ -523,28 +620,34 @@ class FAQ extends StatefulWidget {
 class _FAQState extends State<FAQ> {
   final List<FAQItem> _faqs = [
     FAQItem(
-      question: '1. Which platforms are RajaMark compatible with?', 
-      answer: 'RajaMark is designed to be compatible with multiple operating systems, which are Windows, '
-      'macOS, Linux, Android and iOS.'),
+        question: '1. Which platforms are RajaMark compatible with?',
+        answer:
+            'RajaMark is designed to be compatible with multiple operating systems, which are Windows, '
+            'macOS, Linux, Android and iOS.'),
     FAQItem(
-      question: '2. How does RajaMark automate answer sheet grading?', 
-      answer: 'RajaMark assumes the adherence of the answer sheets uploaded to a standardized format and '
-      'layout, and conducts recognition of students’ handwriting with OCR technology to compare the answers with '
-      'the sample provided.'),
+        question: '2. How does RajaMark automate answer sheet grading?',
+        answer:
+            'RajaMark assumes the adherence of the answer sheets uploaded to a standardized format and '
+            'layout, and conducts recognition of students’ handwriting with OCR technology to compare the answers with '
+            'the sample provided.'),
     FAQItem(
-      question: '3. What format should the answer sheets uploaded be in?', 
-      answer: 'The answer sheets (PNG) should have the answers consistently written next to the corresponding '
-      'question numbers in a predetermined manner and written in Capital Letters (e.g., letters A-E)'),
+        question: '3. What format should the answer sheets uploaded be in?',
+        answer:
+            'The answer sheets (PNG) should have the answers consistently written next to the corresponding '
+            'question numbers in a predetermined manner and written in Capital Letters (e.g., letters A-E)'),
     FAQItem(
-      question: '4. How does RajaMark ensure its accuracy in text recognition to compare uploaded answer sheets with '
-      'the sample answers?', 
-      answer: 'While we try our best to produce the most accurate text recognition results using OCR technology, it '
-      'is inevitable to face minor inaccuracies in detecting the handwritten answers. Hence, we highly advise users '
-      'to conduct a thorough checking of the graded answers and make the necessary corrections on the Student Answer Page.'),
+        question:
+            '4. How does RajaMark ensure its accuracy in text recognition to compare uploaded answer sheets with '
+            'the sample answers?',
+        answer:
+            'While we try our best to produce the most accurate text recognition results using OCR technology, it '
+            'is inevitable to face minor inaccuracies in detecting the handwritten answers. Hence, we highly advise users '
+            'to conduct a thorough checking of the graded answers and make the necessary corrections on the Student Answer Page.'),
     FAQItem(
-      question: '5. Can I modify the grading system for a subject?', 
-      answer: 'Yes! After the user has created a subject under the Exam Details page, a default grade will be automatically '
-      'set for the subject and users can click “Edit” to amend the existing grading system.'),
+        question: '5. Can I modify the grading system for a subject?',
+        answer:
+            'Yes! After the user has created a subject under the Exam Details page, a default grade will be automatically '
+            'set for the subject and users can click “Edit” to amend the existing grading system.'),
   ];
 
   @override
@@ -563,13 +666,14 @@ class _FAQState extends State<FAQ> {
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
           ),
           SizedBox(height: 10),
-
-          for (int i=0; i<_faqs.length; i++)
+          for (int i = 0; i < _faqs.length; i++)
             GFAccordion(
               collapsedIcon: Icon(Icons.add),
               expandedIcon: Icon(Icons.minimize),
-              collapsedTitleBackgroundColor: const Color.fromARGB(255, 162, 180, 212),
-              expandedTitleBackgroundColor: const Color.fromARGB(255, 111, 143, 199),
+              collapsedTitleBackgroundColor:
+                  const Color.fromARGB(255, 162, 180, 212),
+              expandedTitleBackgroundColor:
+                  const Color.fromARGB(255, 111, 143, 199),
               title: _faqs[i].question,
               content: _faqs[i].answer,
             ),
@@ -584,5 +688,6 @@ class FAQItem {
   String answer;
   bool isExpanded;
 
-  FAQItem({required this.question, required this.answer, this.isExpanded = false});
+  FAQItem(
+      {required this.question, required this.answer, this.isExpanded = false});
 }
