@@ -67,6 +67,12 @@ flutter:
     - assets/images/3.png
     - assets/images/4.png
     - assets/images/examIllustration.svg
+    - assets/images/tip1.png
+    - assets/images/tip2.png
+    - assets/images/tip3.png
+    - assets/images/tip4.png
+    - assets/images/tip5.png
+    - assets/images/tip6.png
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
