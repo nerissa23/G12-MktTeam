@@ -54,7 +54,12 @@ class Introduction extends StatelessWidget {
             'By leveraging Tesseract OCR for handwritten text recognition and OpenCV for image preprocessing, RajaMark can '
             'swiftly and accurately interpret handwritten answers (A-E) beside question numbers. This automation eliminates the '
             'tedious and error-prone manual grading process, making it ideal for educational institutions seeking a more efficient '
-            'grading solution. In addition to grading, RajaMark offers tools to compile class results, allowing educators to '
+            'grading solution. ',
+            style: _textStyle,
+          ),
+          const SizedBox(height: 10),
+          Text(
+            'In addition to grading, RajaMark offers tools to compile class results, allowing educators to '
             'aggregate individual scores and generate comprehensive reports on class performance in quizzes and tests. This '
             'feature helps teachers quickly identify trends and areas for improvement, streamlining the assessment process. '
             'Overall, RajaMark is a valuable resource for schools and universities aiming to improve the speed and accuracy of '
@@ -84,22 +89,59 @@ class GettingStarted extends StatelessWidget {
           ),
           const SizedBox(height: 10),
           Text(
-            'System Requirements',
+            'Operating System Requirements',
             style: _textStyle1,
           ),
           const SizedBox(height: 10),
           Text(
-            'RajaMark requires macOS Monterey (macOS 12) or later, Windows 10 or later or Linux.',
+            'RajaMark requires (either one):',
+            style: _textStyle2,
+          ),
+          const SizedBox(height: 10),
+          Text(
+            '- the 64-bit version of Microsoft Windows 10 or later. These versions of Windows should include the required Windows PowerShell 5 or later.',
+            style: _textStyle2,
+          ),
+          const SizedBox(height: 10),
+          Text(
+            '- macOS 10.15 (Catalina) or later. This guide presumes your Mac runs the zsh as your default shell.',
+            style: _textStyle2,
+          ),
+          const SizedBox(height: 10),
+          Text(
+            '- Debian Linux 11 or later and Ubuntu Linux 20.04 LTS or later.',
+            style: _textStyle2,
+          ),
+          const SizedBox(height: 10),
+          Text(
+            '- ChromeOS.',
             style: _textStyle2,
           ),
           const SizedBox(height: 20),
           Text(
-            'Intallation Steps',
+            'Installation Steps',
             style: _textStyle1,
           ),
           const SizedBox(height: 10),
           Text(
-            'RajaMark requires macOS Monterey (macOS 12) or later, Windows 10 or later or Linux.',
+            'To install RajaMark:',
+            style: _textStyle2,
+          ),
+          const SizedBox(height: 10),
+          Text(
+            '1. Click here to access our Google Drive.',
+            style: _textStyle2,
+          ),const SizedBox(height: 10),
+          Text(
+            '2. Download the .exe file.',
+            style: _textStyle2,
+          ),const SizedBox(height: 10),
+          Text(
+            '3. Click the .exe file and allow it to make changes to your computer for execution.',
+            style: _textStyle2,
+          ),const SizedBox(height: 10),
+          Text(
+            '4. You are all set.',
             style: _textStyle2,
           ),
           const SizedBox(height: 20),
