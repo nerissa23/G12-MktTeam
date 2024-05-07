@@ -180,29 +180,78 @@ class Troubleshooting extends StatelessWidget {
             style: _textStyle1,
           ),
           const SizedBox(height: 10),
-          Text(
-            'RajaMark requires macOS Monterey (macOS 12) or later, Windows 10 or later or Linux.',
-            style: _textStyle2,
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                '1. Poor Image Quality: OCR accuracy may decrease if the input images are of low resolution or contain artifacts such as blurriness or distortion.',
+                style: _textStyle2,
+              ),
+              Text(
+                '2. Unsupported Fonts: Certain fonts or styles may not be recognized accurately by the OCR system, leading to errors in text extraction.',
+                style: _textStyle2,
+              ),
+              Text(
+                '3. Complex Layouts: Documents with complex layouts, such as tables, columns, or mixed fonts, can pose challenges for OCR algorithms and result in incorrect text extraction.',
+                style: _textStyle2,
+              ),
+              Text(
+                '4. Handwritten Text: OCR systems are primarily designed for printed text and may struggle to accurately recognize handwritten text.',
+                style: _textStyle2,
+              ),
+            ],
           ),
+          
           const SizedBox(height: 20),
           Text(
             'Solutions',
             style: _textStyle1,
           ),
           const SizedBox(height: 10),
-          Text(
-            'RajaMark requires macOS Monterey (macOS 12) or later, Windows 10 or later or Linux.',
-            style: _textStyle2,
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                '1. Improve Image Quality: Ensure that input images are clear, well-lit, and have sufficient resolution. Avoid using images with excessive noise or compression artifacts.',
+                style: _textStyle2,
+              ),
+              Text(
+                '2. Use Supported Fonts: Whenever possible, use standard fonts and avoid decorative or obscure fonts that may not be recognized reliably by the OCR system.',
+                style: _textStyle2,
+              ),
+              Text(
+                '3. Simplify Layouts: If possible, preprocess documents to remove complex layouts or convert them into simpler formats before performing OCR. This can help improve accuracy and reduce errors.',
+                style: _textStyle2,
+              ),
+              Text(
+                '4. Consider Handwriting Recognition: For handwritten text, consider using specialized OCR models or handwriting recognition software that are optimized for recognizing handwritten characters.',
+                style: _textStyle2,
+              ),
+            ],
           ),
+
           const SizedBox(height: 20),
           Text(
             'Support Contact',
             style: _textStyle1,
           ),
           const SizedBox(height: 10),
-          Text(
-            'RajaMark requires macOS Monterey (macOS 12) or later, Windows 10 or later or Linux.',
-            style: _textStyle2,
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'If you encounter any issues with the OCR system that cannot be resolved using the provided solutions, please contact our support team for assistance:',
+                style: _textStyle2,
+              ),
+              Text(
+                'Email: rajamarkmarketing@gmail.com',
+                style: _textStyle2,
+              ),
+              Text(
+                'Phone: +1 (555) 123-4567',
+                style: _textStyle2,
+              ),
+            ],
           ),
         ],
       ),
