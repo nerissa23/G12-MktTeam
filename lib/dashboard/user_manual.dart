@@ -426,42 +426,149 @@ class Troubleshooting extends StatelessWidget {
 class BestPractices extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final TextStyle _textStyle1 = TextStyle(fontSize: 18);
-    final TextStyle _textStyle2 = TextStyle(fontSize: 14);
-
-    return Container(
-      padding: EdgeInsets.only(top: 0.0, right: 24.0, bottom: 28.0, left: 24.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Text(
-            'Best Practices',
-            style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+    final List<BestPracticeItem> bestPractices = [
+      BestPracticeItem(
+        title: 'Grading Tips',
+        items: [
+          PracticeItem(
+            description: '1. Ensure students format answers consistently and legibly to aid OCR accuracy.',
+            imagePath: 'assets/images/tip1.png', 
           ),
-          const SizedBox(height: 10),
-          Text(
-            'Grading Tips',
-            style: _textStyle1,
+          PracticeItem(
+            description: '2. Advise clear separation of answers for each question to minimize ambiguity.',
+            imagePath: 'assets/images/tip2.png', 
           ),
-          const SizedBox(height: 10),
-          Text(
-            'RajaMark requires macOS Monterey (macOS 12) or later, Windows 10 or later or Linux.',
-            style: _textStyle2,
+          PracticeItem(
+            description: '3. Caution against overlapping answers to enhance OCR interpretation.',
+            imagePath: 'assets/images/tip3.png', 
           ),
-          const SizedBox(height: 20),
-          Text(
-            'Accuracy Recommendations',
-            style: _textStyle1,
+          PracticeItem(
+            description: '4. Scan answers at high resolution in well-lit conditions for optimal recognition.',
           ),
-          const SizedBox(height: 10),
-          Text(
-            'RajaMark requires macOS Monterey (macOS 12) or later, Windows 10 or later or Linux.',
-            style: _textStyle2,
+          PracticeItem(
+            description: '5. Encourage manual review of extracted text for clarity before submission.',
+          ),
+          PracticeItem(
+            description: '6. Ensure students use dark, bold pens or pencils for writing to improve OCR readability.',
+            imagePath: 'assets/images/tip4.png', 
+          ),
+          PracticeItem(
+            description: '7. Remind students to avoid excessive use of decorative elements or symbols that may interfere with OCR recognition.',
+            imagePath: 'assets/images/tip5.png', 
+          ),
+          PracticeItem(
+            description: '8. Provide guidelines for students to write numbers and symbols clearly, especially those prone to misinterpretation.',
+          ),
+          PracticeItem(
+            description: '9. Advise against folding or creasing answer sheets, as it can distort text and hinder OCR accuracy.',
+          ),
+          PracticeItem(
+            description: '10. Recommend students to use a ruler or straight edge for neat alignment of answers to improve OCR alignment.',
+            imagePath: 'assets/images/tip6.png', 
           ),
         ],
       ),
+      BestPracticeItem(
+        title: 'Accuracy Recommendations',
+        items: [
+          PracticeItem(
+            description: '1. Provide clear handwriting guidelines to optimize OCR recognition; for example, require all multiple-choice answers to be in capital letters.',
+          ),
+          PracticeItem(
+            description: '2. Conduct regular practice sessions to familiarize students with handwriting recognition and improve their writing.',
+          ),
+          PracticeItem(
+            description: '3. Offer constructive feedback to students to enhance handwriting quality and OCR accuracy.',
+          ),
+          PracticeItem(
+            description: '4. Provide comprehensive user training to educators to address accuracy challenges effectively.',
+          ),
+          PracticeItem(
+            description: '5. Develop a standardized answer sheet template with clear instructions and designated areas for answers to facilitate OCR processing.',
+          ),
+          PracticeItem(
+            description: '6. Encourage students to practice writing in a consistent style and size to aid OCR recognition.',
+          ),
+        ],
+      ),
+    ];
+
+    final TextStyle textStyle1 = TextStyle(fontSize: 18);
+    final TextStyle textStyle2 = TextStyle(fontSize: 14);
+
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        return SingleChildScrollView(
+          child: Container(
+            padding: EdgeInsets.all(24.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text(
+                  'Best Practices',
+                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                ),
+                const SizedBox(height: 10),
+                for (final practice in bestPractices)
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        practice.title,
+                        style: textStyle1,
+                      ),
+                      const SizedBox(height: 10),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: practice.items.map((item) {
+                          return Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                item.description,
+                                style: textStyle2,
+                              ),
+                              if (item.imagePath != null) // Only show image if imagePath is provided
+                                SizedBox(height: 10),
+                              if (item.imagePath != null)
+                                Center(
+                                  child: Container(
+                                    height: MediaQuery.of(context).size.height * 0.5, // Adjust the percentage as needed
+                                    child: Image.asset(
+                                      item.imagePath!,
+                                      fit: BoxFit.contain,
+                                    ),
+                                  ),
+                                ),
+                              const SizedBox(height: 20),
+                            ],
+                          );
+                        }).toList(),
+                      ),
+                      const SizedBox(height: 20),
+                    ],
+                  ),
+              ],
+            ),
+          ),
+        );
+      },
     );
   }
+}
+
+class BestPracticeItem {
+  final String title;
+  final List<PracticeItem> items;
+
+  BestPracticeItem({required this.title, required this.items});
+}
+
+class PracticeItem {
+  final String description;
+  final String? imagePath;
+
+  PracticeItem({required this.description, this.imagePath});
 }
 
 class Glossary extends StatelessWidget {
