@@ -144,24 +144,146 @@ class GettingStarted extends StatelessWidget {
             '4. You are all set.',
             style: _textStyle2,
           ),
+          
+          // Account Setup
           const SizedBox(height: 20),
           Text(
-            'Account Setup',
+            'Account Setup', 
+            style: _textStyle1,
+          ),
+
+          // Register
+          const SizedBox(height: 15),
+          Text(
+            'i. Register',
             style: _textStyle1,
           ),
           const SizedBox(height: 10),
           Text(
-            'RajaMark requires macOS Monterey (macOS 12) or later, Windows 10 or later or Linux.',
+            '\t\t1. Upon first launch into the system, you will be asked to enter your email and password to log into your existing account in the Login page.',
             style: _textStyle2,
           ),
+          const SizedBox(height: 20),
+          Image.asset(
+            'images/reg1.png', 
+          ),
+           Text(
+            '\n\t\t2. If you have not set up an account before, click the “Don’t have an account? Register here” button. If you have already registered an account, go to Login.',
+            style: _textStyle2,
+          ),
+          const SizedBox(height: 20),
+          Image.asset(
+            'images/reg2.png', 
+          ),
+           Text(
+            '\n\t\t3. You will be asked to give your email and password that you intend to use. Upon completing the registration, you will have to enter your password once again for confirmation.',
+            style: _textStyle2,
+          ),
+          const SizedBox(height: 20),
+          Image.asset(
+            'images/reg3.png', 
+          ),
+           Text(
+            '\n\t\t4. Click the “Register” button once you have filled up the required information for registration.',
+            style: _textStyle2,
+          ),
+          const SizedBox(height: 20),
+           Text(
+            '\t\t5. You will be redirected to the Login if you have registered successfully.',
+            style: _textStyle2,
+          ),
+          
+          //Login
+          const SizedBox(height: 15),
+          Text(
+            'ii. Login',
+            style: _textStyle1,
+          ),
+          const SizedBox(height: 10),
+          Text(
+            '\t\t1. In the Login page, fill in your email or username and password then click on the “Log in” button.',
+            style: _textStyle2,
+          ),
+          const SizedBox(height: 20),
+          Image.asset(
+            'images/login1.png', 
+            height:400,
+          ),
+           Text(
+            '\n\t\t2. If you have forgotten your password and wish to create a new one, proceed to Forget Password.',
+            style: _textStyle2,
+          ),
+          
+          // Forget Password
+          const SizedBox(height: 15),
+          Text(
+            'iii. Forget Password',
+            style: _textStyle1,
+          ),
+          const SizedBox(height: 10),
+          Text(
+            '\t\t1. Click on the “Forgot Password?” button.',
+            style: _textStyle2,
+          ),
+          const SizedBox(height: 20),
+          Image.asset(
+            'images/reg2.png', 
+          ),
+           Text(
+            '\n\t\t2. Enter your registered email address to receive a password reset link to change your password.',
+            style: _textStyle2,
+          ),
+          const SizedBox(height: 20),
+          Image.asset(
+            'images/forgetpass2.png', 
+            height:400,
+          ),
+           Text(
+            '\n\t\t3. You will be shown with this message if you have entered a valid email address.',
+            style: _textStyle2,
+          ),
+          const SizedBox(height: 20),
+          Image.asset(
+            'images/forgetpass3.png', 
+            height:400,
+          ),
+
+          //LogOut
+          const SizedBox(height: 15),
+          Text(
+            'iv. Logout',
+            style: _textStyle1,
+          ),
+          const SizedBox(height: 10),
+          Text(
+            '\t\t1. After successfully logged in, you will now see the Homepage (dashboard page) like the picture below:',
+            style: _textStyle2,
+          ),
+          const SizedBox(height: 20),
+          Image.asset(
+            'images/homepage.png', 
+            width:700,
+          ),
+           Text(
+            '\n\t\t2. If you wish to log out, navigate to the navigation bar located at the leftmost of the screen and click on the “LogOut” button. You will then be redirected to the Login page again.',
+            style: _textStyle2,
+          ),
+
           const SizedBox(height: 20),
           Text(
             'Navigation',
             style: _textStyle1,
           ),
+          Image.asset(
+            'images/nav.png', 
+            width:700,
+          ),
           const SizedBox(height: 10),
           Text(
-            'RajaMark requires macOS Monterey (macOS 12) or later, Windows 10 or later or Linux.',
+            '1.\t\tExam Page\n\nThe Exam Page contains all exams that have been created. The exams can be edited or deleted from this table. The date of creation will also be displayed on this page. It is also possible to create a new exam from this page.\n\n'
+            '2.\t\tAccount Page\n\nThe Account Page will display the user’s information. Users will also be able to check and manage their account subscription on this page.\n\n'
+            '3.\t\tUser Manual Page\n\nThe User Manual Page contains the documentation of the user manual that provides detailed instructions on how to use this system effectively.\n\n'
+            '4.\t\tLogout\n\nNavigate to the navigation bar located at the leftmost of the screen and click on the “LogOut” button if you wish to log out from your account.',
             style: _textStyle2,
           ),
         ],
