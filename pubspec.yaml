@@ -75,6 +75,13 @@ flutter:
     - assets/images/IP1.png
     - assets/images/IP2.png
     - assets/images/IP3.png
+    - assets/images/tip1.png
+    - assets/images/tip2.png
+    - assets/images/tip3.png
+    - assets/images/tip4.png
+    - assets/images/tip5.png
+    - assets/images/tip6.png
+    
   # To add assets to your application, add an assets section, like this
 
   # An image asset can refer to one or more resolution-specific "variants", see

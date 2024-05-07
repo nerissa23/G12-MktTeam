@@ -54,7 +54,12 @@ class Introduction extends StatelessWidget {
             'By leveraging Tesseract OCR for handwritten text recognition and OpenCV for image preprocessing, RajaMark can '
             'swiftly and accurately interpret handwritten answers (A-E) beside question numbers. This automation eliminates the '
             'tedious and error-prone manual grading process, making it ideal for educational institutions seeking a more efficient '
-            'grading solution. In addition to grading, RajaMark offers tools to compile class results, allowing educators to '
+            'grading solution. ',
+            style: _textStyle,
+          ),
+          const SizedBox(height: 10),
+          Text(
+            'In addition to grading, RajaMark offers tools to compile class results, allowing educators to '
             'aggregate individual scores and generate comprehensive reports on class performance in quizzes and tests. This '
             'feature helps teachers quickly identify trends and areas for improvement, streamlining the assessment process. '
             'Overall, RajaMark is a valuable resource for schools and universities aiming to improve the speed and accuracy of '
@@ -84,42 +89,201 @@ class GettingStarted extends StatelessWidget {
           ),
           const SizedBox(height: 10),
           Text(
-            'System Requirements',
+            'Operating System Requirements',
             style: _textStyle1,
           ),
           const SizedBox(height: 10),
           Text(
-            'RajaMark requires macOS Monterey (macOS 12) or later, Windows 10 or later or Linux.',
+            'RajaMark requires (either one):',
+            style: _textStyle2,
+          ),
+          const SizedBox(height: 10),
+          Text(
+            '- the 64-bit version of Microsoft Windows 10 or later. These versions of Windows should include the required Windows PowerShell 5 or later.',
+            style: _textStyle2,
+          ),
+          const SizedBox(height: 10),
+          Text(
+            '- macOS 10.15 (Catalina) or later. This guide presumes your Mac runs the zsh as your default shell.',
+            style: _textStyle2,
+          ),
+          const SizedBox(height: 10),
+          Text(
+            '- Debian Linux 11 or later and Ubuntu Linux 20.04 LTS or later.',
+            style: _textStyle2,
+          ),
+          const SizedBox(height: 10),
+          Text(
+            '- ChromeOS.',
             style: _textStyle2,
           ),
           const SizedBox(height: 20),
           Text(
-            'Intallation Steps',
+            'Installation Steps',
             style: _textStyle1,
           ),
           const SizedBox(height: 10),
           Text(
-            'RajaMark requires macOS Monterey (macOS 12) or later, Windows 10 or later or Linux.',
+            'To install RajaMark:',
+            style: _textStyle2,
+          ),
+          const SizedBox(height: 10),
+          Text(
+            '1. Click here to access our Google Drive.',
+            style: _textStyle2,
+          ),const SizedBox(height: 10),
+          Text(
+            '2. Download the .exe file.',
+            style: _textStyle2,
+          ),const SizedBox(height: 10),
+          Text(
+            '3. Click the .exe file and allow it to make changes to your computer for execution.',
+            style: _textStyle2,
+          ),const SizedBox(height: 10),
+          Text(
+            '4. You are all set.',
+            style: _textStyle2,
+          ),
+          
+          // Account Setup
+          const SizedBox(height: 20),
+          Text(
+            'Account Setup', 
+            style: _textStyle1,
+          ),
+
+          // Register
+          const SizedBox(height: 15),
+          Text(
+            'i. Register',
+            style: _textStyle1,
+          ),
+          const SizedBox(height: 10),
+          Text(
+            '\t\t1. Upon first launch into the system, you will be asked to enter your email and password to log into your existing account in the Login page.',
             style: _textStyle2,
           ),
           const SizedBox(height: 20),
+          Image.asset(
+            'images/reg1.png', 
+          ),
+           Text(
+            '\n\t\t2. If you have not set up an account before, click the “Don’t have an account? Register here” button. If you have already registered an account, go to Login.',
+            style: _textStyle2,
+          ),
+          const SizedBox(height: 20),
+          Image.asset(
+            'images/reg2.png', 
+          ),
+           Text(
+            '\n\t\t3. You will be asked to give your email and password that you intend to use. Upon completing the registration, you will have to enter your password once again for confirmation.',
+            style: _textStyle2,
+          ),
+          const SizedBox(height: 20),
+          Image.asset(
+            'images/reg3.png', 
+          ),
+           Text(
+            '\n\t\t4. Click the “Register” button once you have filled up the required information for registration.',
+            style: _textStyle2,
+          ),
+          const SizedBox(height: 20),
+           Text(
+            '\t\t5. You will be redirected to the Login if you have registered successfully.',
+            style: _textStyle2,
+          ),
+          
+          //Login
+          const SizedBox(height: 15),
           Text(
-            'Account Setup',
+            'ii. Login',
             style: _textStyle1,
           ),
           const SizedBox(height: 10),
           Text(
-            'RajaMark requires macOS Monterey (macOS 12) or later, Windows 10 or later or Linux.',
+            '\t\t1. In the Login page, fill in your email or username and password then click on the “Log in” button.',
             style: _textStyle2,
           ),
+          const SizedBox(height: 20),
+          Image.asset(
+            'images/login1.png', 
+            height:400,
+          ),
+           Text(
+            '\n\t\t2. If you have forgotten your password and wish to create a new one, proceed to Forget Password.',
+            style: _textStyle2,
+          ),
+          
+          // Forget Password
+          const SizedBox(height: 15),
+          Text(
+            'iii. Forget Password',
+            style: _textStyle1,
+          ),
+          const SizedBox(height: 10),
+          Text(
+            '\t\t1. Click on the “Forgot Password?” button.',
+            style: _textStyle2,
+          ),
+          const SizedBox(height: 20),
+          Image.asset(
+            'images/reg2.png', 
+          ),
+           Text(
+            '\n\t\t2. Enter your registered email address to receive a password reset link to change your password.',
+            style: _textStyle2,
+          ),
+          const SizedBox(height: 20),
+          Image.asset(
+            'images/forgetpass2.png', 
+            height:400,
+          ),
+           Text(
+            '\n\t\t3. You will be shown with this message if you have entered a valid email address.',
+            style: _textStyle2,
+          ),
+          const SizedBox(height: 20),
+          Image.asset(
+            'images/forgetpass3.png', 
+            height:400,
+          ),
+
+          //LogOut
+          const SizedBox(height: 15),
+          Text(
+            'iv. Logout',
+            style: _textStyle1,
+          ),
+          const SizedBox(height: 10),
+          Text(
+            '\t\t1. After successfully logged in, you will now see the Homepage (dashboard page) like the picture below:',
+            style: _textStyle2,
+          ),
+          const SizedBox(height: 20),
+          Image.asset(
+            'images/homepage.png', 
+            width:700,
+          ),
+           Text(
+            '\n\t\t2. If you wish to log out, navigate to the navigation bar located at the leftmost of the screen and click on the “LogOut” button. You will then be redirected to the Login page again.',
+            style: _textStyle2,
+          ),
+
           const SizedBox(height: 20),
           Text(
             'Navigation',
             style: _textStyle1,
           ),
+          Image.asset(
+            'images/nav.png', 
+            width:700,
+          ),
           const SizedBox(height: 10),
           Text(
-            'RajaMark requires macOS Monterey (macOS 12) or later, Windows 10 or later or Linux.',
+            '1.\t\tExam Page\n\nThe Exam Page contains all exams that have been created. The exams can be edited or deleted from this table. The date of creation will also be displayed on this page. It is also possible to create a new exam from this page.\n\n'
+            '2.\t\tAccount Page\n\nThe Account Page will display the user’s information. Users will also be able to check and manage their account subscription on this page.\n\n'
+            '3.\t\tUser Manual Page\n\nThe User Manual Page contains the documentation of the user manual that provides detailed instructions on how to use this system effectively.\n\n'
+            '4.\t\tLogout\n\nNavigate to the navigation bar located at the leftmost of the screen and click on the “LogOut” button if you wish to log out from your account.',
             style: _textStyle2,
           ),
         ],
@@ -368,42 +532,149 @@ class Troubleshooting extends StatelessWidget {
 class BestPractices extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final TextStyle _textStyle1 = TextStyle(fontSize: 18);
-    final TextStyle _textStyle2 = TextStyle(fontSize: 14);
-
-    return Container(
-      padding: EdgeInsets.only(top: 0.0, right: 24.0, bottom: 28.0, left: 24.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Text(
-            'Best Practices',
-            style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+    final List<BestPracticeItem> bestPractices = [
+      BestPracticeItem(
+        title: 'Grading Tips',
+        items: [
+          PracticeItem(
+            description: '1. Ensure students format answers consistently and legibly to aid OCR accuracy.',
+            imagePath: 'assets/images/tip1.png', 
           ),
-          const SizedBox(height: 10),
-          Text(
-            'Grading Tips',
-            style: _textStyle1,
+          PracticeItem(
+            description: '2. Advise clear separation of answers for each question to minimize ambiguity.',
+            imagePath: 'assets/images/tip2.png', 
           ),
-          const SizedBox(height: 10),
-          Text(
-            'RajaMark requires macOS Monterey (macOS 12) or later, Windows 10 or later or Linux.',
-            style: _textStyle2,
+          PracticeItem(
+            description: '3. Caution against overlapping answers to enhance OCR interpretation.',
+            imagePath: 'assets/images/tip3.png', 
           ),
-          const SizedBox(height: 20),
-          Text(
-            'Accuracy Recommendations',
-            style: _textStyle1,
+          PracticeItem(
+            description: '4. Scan answers at high resolution in well-lit conditions for optimal recognition.',
           ),
-          const SizedBox(height: 10),
-          Text(
-            'RajaMark requires macOS Monterey (macOS 12) or later, Windows 10 or later or Linux.',
-            style: _textStyle2,
+          PracticeItem(
+            description: '5. Encourage manual review of extracted text for clarity before submission.',
+          ),
+          PracticeItem(
+            description: '6. Ensure students use dark, bold pens or pencils for writing to improve OCR readability.',
+            imagePath: 'assets/images/tip4.png', 
+          ),
+          PracticeItem(
+            description: '7. Remind students to avoid excessive use of decorative elements or symbols that may interfere with OCR recognition.',
+            imagePath: 'assets/images/tip5.png', 
+          ),
+          PracticeItem(
+            description: '8. Provide guidelines for students to write numbers and symbols clearly, especially those prone to misinterpretation.',
+          ),
+          PracticeItem(
+            description: '9. Advise against folding or creasing answer sheets, as it can distort text and hinder OCR accuracy.',
+          ),
+          PracticeItem(
+            description: '10. Recommend students to use a ruler or straight edge for neat alignment of answers to improve OCR alignment.',
+            imagePath: 'assets/images/tip6.png', 
           ),
         ],
       ),
+      BestPracticeItem(
+        title: 'Accuracy Recommendations',
+        items: [
+          PracticeItem(
+            description: '1. Provide clear handwriting guidelines to optimize OCR recognition; for example, require all multiple-choice answers to be in capital letters.',
+          ),
+          PracticeItem(
+            description: '2. Conduct regular practice sessions to familiarize students with handwriting recognition and improve their writing.',
+          ),
+          PracticeItem(
+            description: '3. Offer constructive feedback to students to enhance handwriting quality and OCR accuracy.',
+          ),
+          PracticeItem(
+            description: '4. Provide comprehensive user training to educators to address accuracy challenges effectively.',
+          ),
+          PracticeItem(
+            description: '5. Develop a standardized answer sheet template with clear instructions and designated areas for answers to facilitate OCR processing.',
+          ),
+          PracticeItem(
+            description: '6. Encourage students to practice writing in a consistent style and size to aid OCR recognition.',
+          ),
+        ],
+      ),
+    ];
+
+    final TextStyle textStyle1 = TextStyle(fontSize: 18);
+    final TextStyle textStyle2 = TextStyle(fontSize: 14);
+
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        return SingleChildScrollView(
+          child: Container(
+            padding: EdgeInsets.all(24.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text(
+                  'Best Practices',
+                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                ),
+                const SizedBox(height: 10),
+                for (final practice in bestPractices)
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        practice.title,
+                        style: textStyle1,
+                      ),
+                      const SizedBox(height: 10),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: practice.items.map((item) {
+                          return Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                item.description,
+                                style: textStyle2,
+                              ),
+                              if (item.imagePath != null) // Only show image if imagePath is provided
+                                SizedBox(height: 10),
+                              if (item.imagePath != null)
+                                Center(
+                                  child: Container(
+                                    height: MediaQuery.of(context).size.height * 0.5, // Adjust the percentage as needed
+                                    child: Image.asset(
+                                      item.imagePath!,
+                                      fit: BoxFit.contain,
+                                    ),
+                                  ),
+                                ),
+                              const SizedBox(height: 20),
+                            ],
+                          );
+                        }).toList(),
+                      ),
+                      const SizedBox(height: 20),
+                    ],
+                  ),
+              ],
+            ),
+          ),
+        );
+      },
     );
   }
+}
+
+class BestPracticeItem {
+  final String title;
+  final List<PracticeItem> items;
+
+  BestPracticeItem({required this.title, required this.items});
+}
+
+class PracticeItem {
+  final String description;
+  final String? imagePath;
+
+  PracticeItem({required this.description, this.imagePath});
 }
 
 class Glossary extends StatelessWidget {
@@ -688,6 +959,5 @@ class FAQItem {
   String answer;
   bool isExpanded;
 
-  FAQItem(
-      {required this.question, required this.answer, this.isExpanded = false});
+  FAQItem({required this.question, required this.answer, this.isExpanded = false});
 }
