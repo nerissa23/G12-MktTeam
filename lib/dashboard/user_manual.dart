@@ -429,15 +429,10 @@ class Features extends StatelessWidget {
             'Features',
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
           ),
-          SizedBox(height: 10),
+          SizedBox(height: 20),
           Text(
             'Exam Creation',
             style: textStyle1,
-          ),
-          const SizedBox(height: 10),
-          Text(
-            'RajaMark requires macOS Monterey (macOS 12) or later, Windows 10 or later or Linux.',
-            style: textStyle2,
           ),
           SizedBox(height: 20),
           Text(
