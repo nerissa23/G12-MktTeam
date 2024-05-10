@@ -514,11 +514,11 @@ class Troubleshooting extends StatelessWidget {
                 style: _textStyle2,
               ),
               Text(
-                'Email: rajamarkmarketing@gmail.com',
+                "",
                 style: _textStyle2,
               ),
               Text(
-                'Phone: +1 (555) 123-4567',
+                'Email: spqprojectmanager@gmail.com',
                 style: _textStyle2,
               ),
             ],
