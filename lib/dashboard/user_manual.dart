@@ -75,6 +75,10 @@ class ManualIndex extends StatelessWidget {
   final Function(String) scrollToSection;
 
   ManualIndex({required this.scrollToSection});
+}
+
+class ManualContent extends StatelessWidget {
+  const ManualContent({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -261,24 +265,146 @@ class GettingStarted extends StatelessWidget {
             '4. You are all set.',
             style: _textStyle2,
           ),
+          
+          // Account Setup
           const SizedBox(height: 20),
           Text(
-            'Account Setup',
+            'Account Setup', 
+            style: _textStyle1,
+          ),
+
+          // Register
+          const SizedBox(height: 15),
+          Text(
+            'i. Register',
             style: _textStyle1,
           ),
           const SizedBox(height: 10),
           Text(
-            'RajaMark requires macOS Monterey (macOS 12) or later, Windows 10 or later or Linux.',
+            '\t\t1. Upon first launch into the system, you will be asked to enter your email and password to log into your existing account in the Login page.',
             style: _textStyle2,
           ),
+          const SizedBox(height: 20),
+          Image.asset(
+            'images/reg1.png', 
+          ),
+           Text(
+            '\n\t\t2. If you have not set up an account before, click the “Don’t have an account? Register here” button. If you have already registered an account, go to Login.',
+            style: _textStyle2,
+          ),
+          const SizedBox(height: 20),
+          Image.asset(
+            'images/reg2.png', 
+          ),
+           Text(
+            '\n\t\t3. You will be asked to give your email and password that you intend to use. Upon completing the registration, you will have to enter your password once again for confirmation.',
+            style: _textStyle2,
+          ),
+          const SizedBox(height: 20),
+          Image.asset(
+            'images/reg3.png', 
+          ),
+           Text(
+            '\n\t\t4. Click the “Register” button once you have filled up the required information for registration.',
+            style: _textStyle2,
+          ),
+          const SizedBox(height: 20),
+           Text(
+            '\t\t5. You will be redirected to the Login if you have registered successfully.',
+            style: _textStyle2,
+          ),
+          
+          //Login
+          const SizedBox(height: 15),
+          Text(
+            'ii. Login',
+            style: _textStyle1,
+          ),
+          const SizedBox(height: 10),
+          Text(
+            '\t\t1. In the Login page, fill in your email or username and password then click on the “Log in” button.',
+            style: _textStyle2,
+          ),
+          const SizedBox(height: 20),
+          Image.asset(
+            'images/login1.png', 
+            height:400,
+          ),
+           Text(
+            '\n\t\t2. If you have forgotten your password and wish to create a new one, proceed to Forget Password.',
+            style: _textStyle2,
+          ),
+          
+          // Forget Password
+          const SizedBox(height: 15),
+          Text(
+            'iii. Forget Password',
+            style: _textStyle1,
+          ),
+          const SizedBox(height: 10),
+          Text(
+            '\t\t1. Click on the “Forgot Password?” button.',
+            style: _textStyle2,
+          ),
+          const SizedBox(height: 20),
+          Image.asset(
+            'images/reg2.png', 
+          ),
+           Text(
+            '\n\t\t2. Enter your registered email address to receive a password reset link to change your password.',
+            style: _textStyle2,
+          ),
+          const SizedBox(height: 20),
+          Image.asset(
+            'images/forgetpass2.png', 
+            height:400,
+          ),
+           Text(
+            '\n\t\t3. You will be shown with this message if you have entered a valid email address.',
+            style: _textStyle2,
+          ),
+          const SizedBox(height: 20),
+          Image.asset(
+            'images/forgetpass3.png', 
+            height:400,
+          ),
+
+          //LogOut
+          const SizedBox(height: 15),
+          Text(
+            'iv. Logout',
+            style: _textStyle1,
+          ),
+          const SizedBox(height: 10),
+          Text(
+            '\t\t1. After successfully logged in, you will now see the Homepage (dashboard page) like the picture below:',
+            style: _textStyle2,
+          ),
+          const SizedBox(height: 20),
+          Image.asset(
+            'images/homepage.png', 
+            width:700,
+          ),
+           Text(
+            '\n\t\t2. If you wish to log out, navigate to the navigation bar located at the leftmost of the screen and click on the “LogOut” button. You will then be redirected to the Login page again.',
+            style: _textStyle2,
+          ),
+
           const SizedBox(height: 20),
           Text(
             'Navigation',
             style: _textStyle1,
           ),
+          Image.asset(
+            'images/nav.png', 
+            width:700,
+          ),
           const SizedBox(height: 10),
           Text(
-            'RajaMark requires macOS Monterey (macOS 12) or later, Windows 10 or later or Linux.',
+            '1.\t\tExam Page\n\nThe Exam Page contains all exams that have been created. The exams can be edited or deleted from this table. The date of creation will also be displayed on this page. It is also possible to create a new exam from this page.\n\n'
+            '2.\t\tAccount Page\n\nThe Account Page will display the user’s information. Users will also be able to check and manage their account subscription on this page.\n\n'
+            '3.\t\tUser Manual Page\n\nThe User Manual Page contains the documentation of the user manual that provides detailed instructions on how to use this system effectively.\n\n'
+            '4.\t\tLogout\n\nNavigate to the navigation bar located at the leftmost of the screen and click on the “LogOut” button if you wish to log out from your account.',
             style: _textStyle2,
           ),
         ],
@@ -294,8 +420,8 @@ class Features extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final TextStyle _textStyle1 = TextStyle(fontSize: 18);
-    final TextStyle _textStyle2 = TextStyle(fontSize: 14);
+    final TextStyle textStyle1 = TextStyle(fontSize: 18);
+    final TextStyle textStyle2 = TextStyle(fontSize: 14);
 
     return Container(
       key: key,
@@ -310,13 +436,121 @@ class Features extends StatelessWidget {
           SizedBox(height: 10),
           Text(
             'Exam Creation',
-            style: _textStyle1,
+            style: textStyle1,
           ),
           const SizedBox(height: 10),
           Text(
             'RajaMark requires macOS Monterey (macOS 12) or later, Windows 10 or later or Linux.',
-            style: _textStyle2,
+            style: textStyle2,
+          ),
+          SizedBox(height: 20),
+          Text(
+            'Upload Student Answer',
+            style: textStyle1,
+          ),
+          const SizedBox(height: 10),
+          Column(
+            children: [
+              _buildStepWithImage(
+                  '1. Navigate to "Exams” and select the exam you wish to grade.',
+                  'USA1.png'),
+              SizedBox(height: 10),
+              _buildStepWithImage(
+                  '2. In the student column, locate and click the "Add" button to input student data.',
+                  'USA2.png'),
+              SizedBox(height: 10),
+              _buildStepWithImage(
+                  '3. Enter the student\'s ID and name into the designated fields.',
+                  ''),
+              _buildStepWithImage(
+                  '4. Click the "Upload" button to update the student\'s answer sheet.',
+                  'USA3.png'),
+              _buildStepWithImage(
+                  '5. To add the student\'s answer sheet, either drag a file or use the "Choose files" option to select the file from your computer.',
+                  'USA4.png'),
+              SizedBox(height: 10),
+              _buildStepWithImage(
+                  '6. After selecting a file, refer to Image Preprocessing for more details.',
+                  'USA4.png'),
+              SizedBox(height: 10),
+              _buildStepWithImage(
+                  '7. The student\'s details will be displayed on the page for confirmation.',
+                  'USA5.png'),
+              SizedBox(height: 10),
+              _buildStepWithImage(
+                  '8. Repeat steps 2 to 7 to add more students as necessary.',
+                  ''),
+              _buildStepWithImage(
+                  '9. Once you have finished adding all students, click the "Save" button to save the student records.',
+                  ''),
+            ],
+          ),
+          SizedBox(height: 20),
+          Text(
+            'Image Preprocessing',
+            style: textStyle1,
+          ),
+          const SizedBox(height: 10),
+          Column(
+            children: [
+              _buildStepWithImage(
+                  '1. Once a file is selected for upload, the system will begin processing the image.',
+                  'IP1.png'),
+              SizedBox(height: 10),
+              Text(
+                '2. After successful processing, users are required to enter a file name for saving and the author\'s name. (In case of processing failure, refer to Troubleshooting for more info)',
+                style: textStyle2,
+              ),
+              _buildStepWithImage(
+                  '3.  Click on "Extract this file" to initiate OCR processing.',
+                  'IP2.png'),
+              SizedBox(height: 10),
+              _buildStepWithImage(
+                  '4. The system will commence extracting text from the image.',
+                  'IP3.png'),
+              SizedBox(height: 10),
+              _buildStepWithImage(
+                  '5. Upon successful extraction, the extracted text (answers) will be displayed.',
+                  ''),
+              Text(
+                '6. If the extracted data is incorrect, users may request a reupload. Otherwise, proceed to Step 7 of Upload Student Answer if no issues arise.',
+                style: textStyle2,
+              ),
+            ],
+          ),
+          SizedBox(height: 20),
+          Text(
+            'Score Calculation and Reporting',
+            style: textStyle1,
+          ),
+          const SizedBox(height: 10),
+          Text(
+            '1. Navigate to "Exam" and select the eye icon of the exam you wish to view.\n2. Upon uploading students\' answers, the system will automatically calculate the score for each student and calculate the mean and median score of the class. (Refer to Upload Student Answer to know more about uploading student’s answer)\n3. To generate a report, click on the "Generate Report" button. \n4. The report will include statistical measures such as the median, mean, and other relevant statistics.',
+            style: TextStyle(fontSize: 14),
           )
+        ],
+      ),
+    );
+  }
+
+  Widget _buildStepWithImage(String text, String imageName) {
+    return Align(
+      alignment: Alignment.centerLeft,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            text,
+            style: const TextStyle(fontSize: 14),
+            textAlign: TextAlign.justify,
+          ),
+          if (imageName.isNotEmpty)
+            Image.asset(
+              'assets/images/$imageName', // Assuming the images are in the assets folder
+              width: 500,
+              height: 300,
+              fit: BoxFit.contain,
+            ),
         ],
       ),
     );
@@ -348,63 +582,165 @@ class Troubleshooting extends StatelessWidget {
             'Common Issues',
             style: _textStyle1,
           ),
-          const SizedBox(height: 10),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                '1. Poor Image Quality: OCR accuracy may decrease if the input images are of low resolution or contain artifacts such as blurriness or distortion.',
-                style: _textStyle2,
-              ),
-              Text(
-                '2. Unsupported Fonts: Certain fonts or styles may not be recognized accurately by the OCR system, leading to errors in text extraction.',
-                style: _textStyle2,
-              ),
-              Text(
-                '3. Complex Layouts: Documents with complex layouts, such as tables, columns, or mixed fonts, can pose challenges for OCR algorithms and result in incorrect text extraction.',
-                style: _textStyle2,
-              ),
-              Text(
-                '4. Handwritten Text: OCR systems are primarily designed for printed text and may struggle to accurately recognize handwritten text.',
-                style: _textStyle2,
-              ),
-            ],
-          ),
-          
           const SizedBox(height: 20),
-          Text(
-            'Solutions',
-            style: _textStyle1,
+          Container(
+            width: 800,
+            child: Table(
+              border: TableBorder.all(),
+              defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+              columnWidths: {
+                0: FlexColumnWidth(0.3),
+              },
+              children: [
+                TableRow(
+                  children: [
+                    TableCell(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('NO'),
+                      ),
+                    ),
+                    TableCell(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('Issues'),
+                      ),
+                    ),
+                    TableCell(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('Issue Description'),
+                      ),
+                    ),
+                    TableCell(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('Solution'),
+                      ),
+                    ),
+                  ],
+                ),
+                TableRow(
+                  children: [
+                    TableCell(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('1'),
+                      ),
+                    ),
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'Poor Image Quality')),
+                    ),
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'OCR accuracy may decrease if the input images are of low resolution or contain artifacts such as blurriness or distortion.')),
+                    ),
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'Ensure that input images are clear, well-lit, and have sufficient resolution. Avoid using images with excessive noise or compression artifacts.')),
+                    ),
+                  ],
+                ),
+                TableRow(
+                  children: [
+                    TableCell(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('2'),
+                      ),
+                    ),
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'Unsupported Fonts')),
+                    ),
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'Certain fonts or styles may not be recognized accurately by the OCR system, leading to errors in text extraction.')),
+                    ),
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'Whenever possible, use standard fonts and avoid decorative or obscure fonts that may not be recognized reliably by the OCR system.')),
+                    ),
+                  ],
+                ),
+                TableRow(
+                  children: [
+                    TableCell(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('3'),
+                      ),
+                    ),
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'Complex Layouts')),
+                    ),
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'Documents with complex layouts, such as tables, columns, or mixed fonts, can pose challenges for OCR algorithms and result in incorrect text extraction.')),
+                    ),
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'If possible, preprocess documents to remove complex layouts or convert them into simpler formats before performing OCR. This can help improve accuracy and reduce errors.')),
+                    ),
+                  ],
+                ),
+                TableRow(
+                  children: [
+                    TableCell(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('4'),
+                      ),
+                    ),
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'Handwritten Text')),
+                    ),
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'OCR systems are primarily designed for printed text and may struggle to accurately recognize handwritten text.')),
+                    ),
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'For handwritten text, consider using specialized OCR models or handwriting recognition software that are optimized for recognizing handwritten characters.')),
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
-          const SizedBox(height: 10),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                '1. Improve Image Quality: Ensure that input images are clear, well-lit, and have sufficient resolution. Avoid using images with excessive noise or compression artifacts.',
-                style: _textStyle2,
-              ),
-              Text(
-                '2. Use Supported Fonts: Whenever possible, use standard fonts and avoid decorative or obscure fonts that may not be recognized reliably by the OCR system.',
-                style: _textStyle2,
-              ),
-              Text(
-                '3. Simplify Layouts: If possible, preprocess documents to remove complex layouts or convert them into simpler formats before performing OCR. This can help improve accuracy and reduce errors.',
-                style: _textStyle2,
-              ),
-              Text(
-                '4. Consider Handwriting Recognition: For handwritten text, consider using specialized OCR models or handwriting recognition software that are optimized for recognizing handwritten characters.',
-                style: _textStyle2,
-              ),
-            ],
-          ),
-
-          const SizedBox(height: 20),
+          SizedBox(height: 20),
           Text(
             'Support Contact',
             style: _textStyle1,
           ),
-          const SizedBox(height: 10),
+          SizedBox(height: 10),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -413,11 +749,11 @@ class Troubleshooting extends StatelessWidget {
                 style: _textStyle2,
               ),
               Text(
-                'Email: rajamarkmarketing@gmail.com',
+                "",
                 style: _textStyle2,
               ),
               Text(
-                'Phone: +1 (555) 123-4567',
+                'Email: spqprojectmanager@gmail.com',
                 style: _textStyle2,
               ),
             ],
@@ -452,26 +788,150 @@ class BestPractices extends StatelessWidget {
           Text(
             'Grading Tips',
             style: _textStyle1,
+
+    final List<BestPracticeItem> bestPractices = [
+      BestPracticeItem(
+        title: 'Grading Tips',
+        items: [
+          PracticeItem(
+            description: '1. Ensure students format answers consistently and legibly to aid OCR accuracy.',
+            imagePath: 'assets/images/tip1.png', 
           ),
-          const SizedBox(height: 10),
-          Text(
-            'RajaMark requires macOS Monterey (macOS 12) or later, Windows 10 or later or Linux.',
-            style: _textStyle2,
+          PracticeItem(
+            description: '2. Advise clear separation of answers for each question to minimize ambiguity.',
+            imagePath: 'assets/images/tip2.png', 
           ),
-          const SizedBox(height: 20),
-          Text(
-            'Accuracy Recommendations',
-            style: _textStyle1,
+          PracticeItem(
+            description: '3. Caution against overlapping answers to enhance OCR interpretation.',
+            imagePath: 'assets/images/tip3.png', 
           ),
-          const SizedBox(height: 10),
-          Text(
-            'RajaMark requires macOS Monterey (macOS 12) or later, Windows 10 or later or Linux.',
-            style: _textStyle2,
+          PracticeItem(
+            description: '4. Scan answers at high resolution in well-lit conditions for optimal recognition.',
+          ),
+          PracticeItem(
+            description: '5. Encourage manual review of extracted text for clarity before submission.',
+          ),
+          PracticeItem(
+            description: '6. Ensure students use dark, bold pens or pencils for writing to improve OCR readability.',
+            imagePath: 'assets/images/tip4.png', 
+          ),
+          PracticeItem(
+            description: '7. Remind students to avoid excessive use of decorative elements or symbols that may interfere with OCR recognition.',
+            imagePath: 'assets/images/tip5.png', 
+          ),
+          PracticeItem(
+            description: '8. Provide guidelines for students to write numbers and symbols clearly, especially those prone to misinterpretation.',
+          ),
+          PracticeItem(
+            description: '9. Advise against folding or creasing answer sheets, as it can distort text and hinder OCR accuracy.',
+          ),
+          PracticeItem(
+            description: '10. Recommend students to use a ruler or straight edge for neat alignment of answers to improve OCR alignment.',
+            imagePath: 'assets/images/tip6.png', 
           ),
         ],
       ),
+      BestPracticeItem(
+        title: 'Accuracy Recommendations',
+        items: [
+          PracticeItem(
+            description: '1. Provide clear handwriting guidelines to optimize OCR recognition; for example, require all multiple-choice answers to be in capital letters.',
+          ),
+          PracticeItem(
+            description: '2. Conduct regular practice sessions to familiarize students with handwriting recognition and improve their writing.',
+          ),
+          PracticeItem(
+            description: '3. Offer constructive feedback to students to enhance handwriting quality and OCR accuracy.',
+          ),
+          PracticeItem(
+            description: '4. Provide comprehensive user training to educators to address accuracy challenges effectively.',
+          ),
+          PracticeItem(
+            description: '5. Develop a standardized answer sheet template with clear instructions and designated areas for answers to facilitate OCR processing.',
+          ),
+          PracticeItem(
+            description: '6. Encourage students to practice writing in a consistent style and size to aid OCR recognition.',
+          ),
+        ],
+      ),
+    ];
+
+    final TextStyle textStyle1 = TextStyle(fontSize: 18);
+    final TextStyle textStyle2 = TextStyle(fontSize: 14);
+
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        return SingleChildScrollView(
+          child: Container(
+            padding: EdgeInsets.all(24.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text(
+                  'Best Practices',
+                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                ),
+                const SizedBox(height: 10),
+                for (final practice in bestPractices)
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        practice.title,
+                        style: textStyle1,
+                      ),
+                      const SizedBox(height: 10),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: practice.items.map((item) {
+                          return Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                item.description,
+                                style: textStyle2,
+                              ),
+                              if (item.imagePath != null) // Only show image if imagePath is provided
+                                SizedBox(height: 10),
+                              if (item.imagePath != null)
+                                Center(
+                                  child: Container(
+                                    height: MediaQuery.of(context).size.height * 0.5, // Adjust the percentage as needed
+                                    child: Image.asset(
+                                      item.imagePath!,
+                                      fit: BoxFit.contain,
+                                    ),
+                                  ),
+                                ),
+                              const SizedBox(height: 20),
+                            ],
+                          );
+                        }).toList(),
+                      ),
+                      const SizedBox(height: 20),
+                    ],
+                  ),
+              ],
+            ),
+          ),
+        );
+      },
     );
   }
+}
+
+class BestPracticeItem {
+  final String title;
+  final List<PracticeItem> items;
+
+  BestPracticeItem({required this.title, required this.items});
+}
+
+class PracticeItem {
+  final String description;
+  final String? imagePath;
+
+  PracticeItem({required this.description, this.imagePath});
 }
 
 class Glossary extends StatelessWidget {
@@ -498,195 +958,186 @@ class Glossary extends StatelessWidget {
           Container(
             width: 800,
             child: Table(
-            border: TableBorder.all(),
-            defaultVerticalAlignment: TableCellVerticalAlignment.middle,
-            columnWidths: {
-              0: FlexColumnWidth(0.3),
-            },
-            children: [
-              TableRow(
-                children: [
-                  TableCell(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('Term'),
+              border: TableBorder.all(),
+              defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+              columnWidths: {
+                0: FlexColumnWidth(0.3),
+              },
+              children: [
+                TableRow(
+                  children: [
+                    TableCell(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('Term'),
+                      ),
                     ),
-                  ),
-                  TableCell(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('Definition'),
+                    TableCell(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('Definition'),
+                      ),
                     ),
-                  ),
-                ],
-              ),
-
-              TableRow(
-                children: [
-                  TableCell(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('Optical Character Recognition (OCR)'),
+                  ],
+                ),
+                TableRow(
+                  children: [
+                    TableCell(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('Optical Character Recognition (OCR)'),
+                      ),
                     ),
-                  ),
-                  TableCell(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('The technology used to convert different types of documents, '
-                      'such as scanned paper documents, PDF files, or images captured by a digital camera, into editable and '
-                      'searchable data.')
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'The technology used to convert different types of documents, '
+                              'such as scanned paper documents, PDF files, or images captured by a digital camera, into editable and '
+                              'searchable data.')),
                     ),
-                  ),
-                ],
-              ),
-
-              TableRow(
-                children: [
-                  TableCell(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('Resolution'),
+                  ],
+                ),
+                TableRow(
+                  children: [
+                    TableCell(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('Resolution'),
+                      ),
                     ),
-                  ),
-                  TableCell(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('The level of detail that an image holds. In the context of scanning, it measures the '
-                      'number of pixels per inch (PPI) or dots per inch (DPI) in a digital image.')
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'The level of detail that an image holds. In the context of scanning, it measures the '
+                              'number of pixels per inch (PPI) or dots per inch (DPI) in a digital image.')),
                     ),
-                  ),
-                ],
-              ),
-
-              TableRow(
-                children: [
-                  TableCell(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('Layout'),
+                  ],
+                ),
+                TableRow(
+                  children: [
+                    TableCell(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('Layout'),
+                      ),
                     ),
-                  ),
-                  TableCell(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('The arrangement of text, images, and other elements on a document or webpage.')
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'The arrangement of text, images, and other elements on a document or webpage.')),
                     ),
-                  ),
-                ],
-              ),
-
-              TableRow(
-                children: [
-                  TableCell(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('Handwriting Recognition'),
+                  ],
+                ),
+                TableRow(
+                  children: [
+                    TableCell(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('Handwriting Recognition'),
+                      ),
                     ),
-                  ),
-                  TableCell(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('The process of converting handwritten text into digital text. It involves analyzing '
-                      'and interpreting handwritten characters to recognize and convert them into machine-readable text.')
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'The process of converting handwritten text into digital text. It involves analyzing '
+                              'and interpreting handwritten characters to recognize and convert them into machine-readable text.')),
                     ),
-                  ),
-                ],
-              ),
-
-              TableRow(
-                children: [
-                  TableCell(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('Calibration'),
+                  ],
+                ),
+                TableRow(
+                  children: [
+                    TableCell(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('Calibration'),
+                      ),
                     ),
-                  ),
-                  TableCell(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('The process of adjusting and fine-tuning equipment or software to ensure accuracy and '
-                      'consistency in performance. In the context of scanning, calibration may involve adjusting settings '
-                      'such as brightness, contrast, and color balance to optimize image quality.')
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'The process of adjusting and fine-tuning equipment or software to ensure accuracy and '
+                              'consistency in performance. In the context of scanning, calibration may involve adjusting settings '
+                              'such as brightness, contrast, and color balance to optimize image quality.')),
                     ),
-                  ),
-                ],
-              ),
-
-              TableRow(
-                children: [
-                  TableCell(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('Standardized Format'),
+                  ],
+                ),
+                TableRow(
+                  children: [
+                    TableCell(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('Standardized Format'),
+                      ),
                     ),
-                  ),
-                  TableCell(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('A predefined layout or structure that follows specific guidelines or conventions. '
-                      'In the context of answer sheets, a standardized format ensures consistency in the presentation of '
-                      'questions and answers, facilitating accurate interpretation and grading.')
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'A predefined layout or structure that follows specific guidelines or conventions. '
+                              'In the context of answer sheets, a standardized format ensures consistency in the presentation of '
+                              'questions and answers, facilitating accurate interpretation and grading.')),
                     ),
-                  ),
-                ],
-              ),
-
-              TableRow(
-                children: [
-                  TableCell(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('Alignment'),
+                  ],
+                ),
+                TableRow(
+                  children: [
+                    TableCell(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('Alignment'),
+                      ),
                     ),
-                  ),
-                  TableCell(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('The positioning of text or objects relative to a reference point or line. In the '
-                      'context of OCR, alignment ensures that text is accurately detected and interpreted within '
-                      'predefined boundaries or regions.')
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'The positioning of text or objects relative to a reference point or line. In the '
+                              'context of OCR, alignment ensures that text is accurately detected and interpreted within '
+                              'predefined boundaries or regions.')),
                     ),
-                  ),
-                ],
-              ),
-
-              TableRow(
-                children: [
-                  TableCell(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('Noise'),
+                  ],
+                ),
+                TableRow(
+                  children: [
+                    TableCell(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('Noise'),
+                      ),
                     ),
-                  ),
-                  TableCell(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('Random variations or interference in an image that can degrade quality and affect '
-                      'OCR accuracy.')
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'Random variations or interference in an image that can degrade quality and affect '
+                              'OCR accuracy.')),
                     ),
-                  ),
-                ],
-              ),
-
-              TableRow(
-                children: [
-                  TableCell(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('Preprocessing'),
+                  ],
+                ),
+                TableRow(
+                  children: [
+                    TableCell(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('Preprocessing'),
+                      ),
                     ),
-                  ),
-                  TableCell(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('The process of applying various techniques to raw data, such as images or text, to '
-                      'improve quality, enhance features, or prepare it for further analysis.')
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'The process of applying various techniques to raw data, such as images or text, to '
+                              'improve quality, enhance features, or prepare it for further analysis.')),
                     ),
-                  ),
-                ],
-              ),
-            ],
-          ),
+                  ],
+                ),
+              ],
+            ),
           )
         ],
       ),
@@ -705,28 +1156,34 @@ class FAQ extends StatefulWidget {
 class _FAQState extends State<FAQ> {
   final List<FAQItem> _faqs = [
     FAQItem(
-      question: '1. Which platforms are RajaMark compatible with?', 
-      answer: 'RajaMark is designed to be compatible with multiple operating systems, which are Windows, '
-      'macOS, Linux, Android and iOS.'),
+        question: '1. Which platforms are RajaMark compatible with?',
+        answer:
+            'RajaMark is designed to be compatible with multiple operating systems, which are Windows, '
+            'macOS, Linux, Android and iOS.'),
     FAQItem(
-      question: '2. How does RajaMark automate answer sheet grading?', 
-      answer: 'RajaMark assumes the adherence of the answer sheets uploaded to a standardized format and '
-      'layout, and conducts recognition of students’ handwriting with OCR technology to compare the answers with '
-      'the sample provided.'),
+        question: '2. How does RajaMark automate answer sheet grading?',
+        answer:
+            'RajaMark assumes the adherence of the answer sheets uploaded to a standardized format and '
+            'layout, and conducts recognition of students’ handwriting with OCR technology to compare the answers with '
+            'the sample provided.'),
     FAQItem(
-      question: '3. What format should the answer sheets uploaded be in?', 
-      answer: 'The answer sheets (PNG) should have the answers consistently written next to the corresponding '
-      'question numbers in a predetermined manner and written in Capital Letters (e.g., letters A-E)'),
+        question: '3. What format should the answer sheets uploaded be in?',
+        answer:
+            'The answer sheets (PNG) should have the answers consistently written next to the corresponding '
+            'question numbers in a predetermined manner and written in Capital Letters (e.g., letters A-E)'),
     FAQItem(
-      question: '4. How does RajaMark ensure its accuracy in text recognition to compare uploaded answer sheets with '
-      'the sample answers?', 
-      answer: 'While we try our best to produce the most accurate text recognition results using OCR technology, it '
-      'is inevitable to face minor inaccuracies in detecting the handwritten answers. Hence, we highly advise users '
-      'to conduct a thorough checking of the graded answers and make the necessary corrections on the Student Answer Page.'),
+        question:
+            '4. How does RajaMark ensure its accuracy in text recognition to compare uploaded answer sheets with '
+            'the sample answers?',
+        answer:
+            'While we try our best to produce the most accurate text recognition results using OCR technology, it '
+            'is inevitable to face minor inaccuracies in detecting the handwritten answers. Hence, we highly advise users '
+            'to conduct a thorough checking of the graded answers and make the necessary corrections on the Student Answer Page.'),
     FAQItem(
-      question: '5. Can I modify the grading system for a subject?', 
-      answer: 'Yes! After the user has created a subject under the Exam Details page, a default grade will be automatically '
-      'set for the subject and users can click “Edit” to amend the existing grading system.'),
+        question: '5. Can I modify the grading system for a subject?',
+        answer:
+            'Yes! After the user has created a subject under the Exam Details page, a default grade will be automatically '
+            'set for the subject and users can click “Edit” to amend the existing grading system.'),
   ];
 
   @override
@@ -745,13 +1202,14 @@ class _FAQState extends State<FAQ> {
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
           ),
           SizedBox(height: 10),
-
-          for (int i=0; i<_faqs.length; i++)
+          for (int i = 0; i < _faqs.length; i++)
             GFAccordion(
               collapsedIcon: Icon(Icons.add),
               expandedIcon: Icon(Icons.minimize),
-              collapsedTitleBackgroundColor: const Color.fromARGB(255, 162, 180, 212),
-              expandedTitleBackgroundColor: const Color.fromARGB(255, 111, 143, 199),
+              collapsedTitleBackgroundColor:
+                  const Color.fromARGB(255, 162, 180, 212),
+              expandedTitleBackgroundColor:
+                  const Color.fromARGB(255, 111, 143, 199),
               title: _faqs[i].question,
               content: _faqs[i].answer,
             ),
@@ -768,6 +1226,7 @@ class FAQItem {
 
   FAQItem({required this.question, required this.answer, this.isExpanded = false});
 }
+
 
 // Definitions for other sections...
 
