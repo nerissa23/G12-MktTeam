@@ -451,61 +451,165 @@ class Troubleshooting extends StatelessWidget {
             'Common Issues',
             style: _textStyle1,
           ),
-          const SizedBox(height: 10),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                '1. Poor Image Quality: OCR accuracy may decrease if the input images are of low resolution or contain artifacts such as blurriness or distortion.',
-                style: _textStyle2,
-              ),
-              Text(
-                '2. Unsupported Fonts: Certain fonts or styles may not be recognized accurately by the OCR system, leading to errors in text extraction.',
-                style: _textStyle2,
-              ),
-              Text(
-                '3. Complex Layouts: Documents with complex layouts, such as tables, columns, or mixed fonts, can pose challenges for OCR algorithms and result in incorrect text extraction.',
-                style: _textStyle2,
-              ),
-              Text(
-                '4. Handwritten Text: OCR systems are primarily designed for printed text and may struggle to accurately recognize handwritten text.',
-                style: _textStyle2,
-              ),
-            ],
-          ),
           const SizedBox(height: 20),
-          Text(
-            'Solutions',
-            style: _textStyle1,
+          Container(
+            width: 800,
+            child: Table(
+              border: TableBorder.all(),
+              defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+              columnWidths: {
+                0: FlexColumnWidth(0.3),
+              },
+              children: [
+                TableRow(
+                  children: [
+                    TableCell(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('NO'),
+                      ),
+                    ),
+                    TableCell(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('Issues'),
+                      ),
+                    ),
+                    TableCell(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('Issue Description'),
+                      ),
+                    ),
+                    TableCell(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('Solution'),
+                      ),
+                    ),
+                  ],
+                ),
+                TableRow(
+                  children: [
+                    TableCell(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('1'),
+                      ),
+                    ),
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'Poor Image Quality')),
+                    ),
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'OCR accuracy may decrease if the input images are of low resolution or contain artifacts such as blurriness or distortion.')),
+                    ),
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'Ensure that input images are clear, well-lit, and have sufficient resolution. Avoid using images with excessive noise or compression artifacts.')),
+                    ),
+                  ],
+                ),
+                TableRow(
+                  children: [
+                    TableCell(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('2'),
+                      ),
+                    ),
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'Unsupported Fonts')),
+                    ),
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'Certain fonts or styles may not be recognized accurately by the OCR system, leading to errors in text extraction.')),
+                    ),
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'Whenever possible, use standard fonts and avoid decorative or obscure fonts that may not be recognized reliably by the OCR system.')),
+                    ),
+                  ],
+                ),
+                TableRow(
+                  children: [
+                    TableCell(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('3'),
+                      ),
+                    ),
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'Complex Layouts')),
+                    ),
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'Documents with complex layouts, such as tables, columns, or mixed fonts, can pose challenges for OCR algorithms and result in incorrect text extraction.')),
+                    ),
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'If possible, preprocess documents to remove complex layouts or convert them into simpler formats before performing OCR. This can help improve accuracy and reduce errors.')),
+                    ),
+                  ],
+                ),
+                TableRow(
+                  children: [
+                    TableCell(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('4'),
+                      ),
+                    ),
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'Handwritten Text')),
+                    ),
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'OCR systems are primarily designed for printed text and may struggle to accurately recognize handwritten text.')),
+                    ),
+                    TableCell(
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                              'For handwritten text, consider using specialized OCR models or handwriting recognition software that are optimized for recognizing handwritten characters.')),
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
-          const SizedBox(height: 10),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                '1. Improve Image Quality: Ensure that input images are clear, well-lit, and have sufficient resolution. Avoid using images with excessive noise or compression artifacts.',
-                style: _textStyle2,
-              ),
-              Text(
-                '2. Use Supported Fonts: Whenever possible, use standard fonts and avoid decorative or obscure fonts that may not be recognized reliably by the OCR system.',
-                style: _textStyle2,
-              ),
-              Text(
-                '3. Simplify Layouts: If possible, preprocess documents to remove complex layouts or convert them into simpler formats before performing OCR. This can help improve accuracy and reduce errors.',
-                style: _textStyle2,
-              ),
-              Text(
-                '4. Consider Handwriting Recognition: For handwritten text, consider using specialized OCR models or handwriting recognition software that are optimized for recognizing handwritten characters.',
-                style: _textStyle2,
-              ),
-            ],
-          ),
-          const SizedBox(height: 20),
+          SizedBox(height: 20),
           Text(
             'Support Contact',
             style: _textStyle1,
           ),
-          const SizedBox(height: 10),
+          SizedBox(height: 10),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
