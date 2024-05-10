@@ -75,10 +75,6 @@ class ManualIndex extends StatelessWidget {
   final Function(String) scrollToSection;
 
   ManualIndex({required this.scrollToSection});
-}
-
-class ManualContent extends StatelessWidget {
-  const ManualContent({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -771,24 +767,6 @@ class BestPractices extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final TextStyle _textStyle1 = TextStyle(fontSize: 18);
-    final TextStyle _textStyle2 = TextStyle(fontSize: 14);
-
-    return Container(
-      key: key,
-      padding: EdgeInsets.all(24.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            'Best Practices',
-            style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-          ),
-          SizedBox(height: 10),
-          Text(
-            'Grading Tips',
-            style: _textStyle1,
-
     final List<BestPracticeItem> bestPractices = [
       BestPracticeItem(
         title: 'Grading Tips',
