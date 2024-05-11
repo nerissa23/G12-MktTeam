@@ -937,13 +937,13 @@ class Troubleshooting extends StatelessWidget {
                       child: Padding(
                           padding: EdgeInsets.all(8.0),
                           child: Text(
-                              'OCR systems are primarily designed for printed text and may struggle to accurately recognize handwritten text.')),
+                              'Our product is encountering difficulties accurately recognizing handwritten text')),
                     ),
                     TableCell(
                       child: Padding(
                           padding: EdgeInsets.all(8.0),
                           child: Text(
-                              'For handwritten text, consider using specialized OCR models or handwriting recognition software that are optimized for recognizing handwritten characters.')),
+                              'For handwritten text, please ensure that the handwriting is clear and legible, and that the document is properly scanned or photographed for optimal results.')),
                     ),
                   ],
                 ),
