@@ -15,7 +15,7 @@
 
 ---
 
-## 1.0 Introduction
+## 1.0 Introduction {#introduction-}
 <p align="justify">Meet RajaMark, your reliable helper to automate the grading of multiple-choice question (MCQ)
 answer sheets. By leveraging Tesseract OCR for handwritten text recognition and OpenCV for
 image preprocessing, RajaMark can swiftly and accurately interpret handwritten answers (A-E)
