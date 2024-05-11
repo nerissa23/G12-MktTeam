@@ -443,14 +443,14 @@ class Features extends StatelessWidget {
               SizedBox(height: 10),
               _buildStepWithImage(
                   '2. Click on the “Create” button to create a new examination/quiz.',
-                  ''),
+                  'EC1.png'),
               SizedBox(height: 10),
               _buildStepWithImage(
                   '3. Enter the examination’s details and grading’s criteria.',
-                  ''),
+                  'EC2.png'),
               _buildStepWithImage(
                   '4. Scroll down to enter the answer scheme.',
-                  ''),
+                  'EC3.png'),
               _buildStepWithImage(
                   '5. Click the “save” button to create the examination record.',
                   ''),
@@ -470,11 +470,11 @@ class Features extends StatelessWidget {
             children: [
               _buildStepWithImage(
                   '1. Click on the “edit” icon on the specific exam.',
-                  ''),
+                  'EE1.png'),
               SizedBox(height: 10),
               _buildStepWithImage(
                   '2. Directed into the edit exam page, enter the changes required.',
-                  ''),
+                  'EE2.png'),
               SizedBox(height: 10),
               _buildStepWithImage(
                   '3. Scroll down and click the “save” button to apply the changes.',
@@ -491,15 +491,15 @@ class Features extends StatelessWidget {
             children: [
               _buildStepWithImage(
                   '1. Click on the “eye” icon to view the exam’s details.',
-                  ''),
+                  'MSA1.png'),
               SizedBox(height: 10),
               _buildStepWithImage(
                   '2. Directed into the exam details page, click into the “eye” icon to view the student’s detail, “note” icon to edit the student’s details or “trash” icon to delete the student’s information.',
-                  ''),
+                  'MSA2.png'),
               SizedBox(height: 10),
               _buildStepWithImage(
                   '3. Student’s detail’s view page, click the “edit result” button to make changes to the student’s details.',
-                  ''),
+                  'MSA3'),
             ],
           ),
           SizedBox(height: 20),
@@ -512,29 +512,29 @@ class Features extends StatelessWidget {
             children: [
               _buildStepWithImage(
                   '1. Click on the “eye” icon to view the exam’s details.',
-                  ''),
+                  'USAns1.png'),
               SizedBox(height: 10),
               _buildStepWithImage(
                   '2. Click on the “upload answer” button to upload the sample answer scheme.',
-                  ''),
+                  'USAns2.png'),
               SizedBox(height: 10),
               _buildStepWithImage(
                   '3. Directed into the answer scheme page, click the “+” icon to upload the sample answer scheme.',
-                  ''),
+                  'USAns3.png'),
               _buildStepWithImage(
                   '4. Upload the answer scheme file.',
-                  ''),
+                  'USAns4.png'),
               _buildStepWithImage(
                   '5. If you fail, try to upload another file of the answer scheme.',
-                  ''),
+                  'USAns5.png'),
               SizedBox(height: 10),
               _buildStepWithImage(
                   '6. Wait for the file to be processed.',
-                  ''),
+                  'USAns6.png'),
               SizedBox(height: 10),
               _buildStepWithImage(
                   '7. Click the “confirm” button to apply the answer scheme.',
-                  ''),
+                  'USAns8.png'),
             ],
           ),
           SizedBox(height: 20),
