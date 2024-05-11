@@ -525,9 +525,3 @@ answers and make the necessary corrections on the Student Answer Page.
 will be automatically set for the subject and users can click “Edit” to amend the existing
 grading system.
 </p>
-
----
-
-<p align="right">(<a href="#-wix1002-final-project-report-">Back to Top</a>)</p>
-
----
