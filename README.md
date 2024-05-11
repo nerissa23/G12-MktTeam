@@ -1,21 +1,21 @@
 <h1>RajaMark User Manual Documentation</h1>
 
   <details>
-    <summary>Table of Contents</summary>
-    <ol>
-      <li><a href="introduction-">Introduction</a></li>
-      <li><a href="getting-started-">Getting Started</a></li>
-      <li><a href="features-">Features</a></li>
-      <li><a href="troubleshooting-">Troubleshooting</a></li>
-      <li><a href="best-practices-">Best Practices</a></li>
-      <li><a href="glossary-">Glossary</a></li>
-      <li><a href="appendix-">Appendix</a></li>
-    </ol>
-  </details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#introduction-">Introductions</a></li>
+    <li><a href="#getting-started-">Getting Started</a></li>
+    <li><a href="#features-">Features</a></li>
+    <li><a href="#troubleshooting-">Troubleshooting</a></li>
+    <li><a href="#best-practices-">Best Practices</a></li>
+    <li><a href="#glossary-">Glossary</a></li>
+    <li><a href="#appendix-">Appendix</a></li>
+  </ol>
+</details>
 
 ---
 
-## 1.0 Introduction {#introduction-}
+## 1.0 Introduction
 <p align="justify">Meet RajaMark, your reliable helper to automate the grading of multiple-choice question (MCQ)
 answer sheets. By leveraging Tesseract OCR for handwritten text recognition and OpenCV for
 image preprocessing, RajaMark can swiftly and accurately interpret handwritten answers (A-E)
@@ -525,3 +525,9 @@ answers and make the necessary corrections on the Student Answer Page.
 will be automatically set for the subject and users can click “Edit” to amend the existing
 grading system.
 </p>
+
+---
+
+<p align="right">(<a href="#-wix1002-final-project-report-">Back to Top</a>)</p>
+
+---
