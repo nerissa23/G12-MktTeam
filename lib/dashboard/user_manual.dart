@@ -453,7 +453,7 @@ class Features extends StatelessWidget {
                   ''),
               _buildStepWithImage(
                   '5. Click the “save” button to create the examination record.',
-                  'USA4.png'),
+                  ''),
               SizedBox(height: 10),
               _buildStepWithImage(
                   '6. Exam Created.',
