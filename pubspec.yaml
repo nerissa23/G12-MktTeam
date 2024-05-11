@@ -66,29 +66,38 @@ flutter:
     - assets/images/2.png
     - assets/images/3.png
     - assets/images/4.png
+    - assets/images/EC1.png
+    - assets/images/EC2.png
+    - assets/images/EC3.png
+    - assets/images/EE1.png
+    - assets/images/EE2.png
     - assets/images/examIllustration.svg
-    - assets/images/USA1.png
-    - assets/images/USA2.png
-    - assets/images/USA3.png
-    - assets/images/USA4.png
-    - assets/images/USA5.png
+    - assets/images/forgetpass2.png
+    - assets/images/forgetpass3.png
+    - assets/images/homepage.png
     - assets/images/IP1.png
     - assets/images/IP2.png
     - assets/images/IP3.png
+    - assets/images/login1.png
+    - assets/images/logout.png
+    - assets/images/MSA1.png
+    - assets/images/MSA2.png
+    - assets/images/MSA3.png
+    - assets/images/nav.png
+    - assets/images/reg1.png
+    - assets/images/reg2.png
+    - assets/images/reg3.png
     - assets/images/tip1.png
     - assets/images/tip2.png
     - assets/images/tip3.png
     - assets/images/tip4.png
     - assets/images/tip5.png
     - assets/images/tip6.png
-    - assets/images/EC1.png
-    - assets/images/EC2.png
-    - assets/images/EC3.png
-    - assets/images/EE1.png
-    - assets/images/EE2.png
-    - assets/images/MSA1.png
-    - assets/images/MSA2.png
-    - assets/images/MSA3.png
+    - assets/images/USA1.png
+    - assets/images/USA2.png
+    - assets/images/USA3.png
+    - assets/images/USA4.png
+    - assets/images/USA5.png
     - assets/images/USAns1.png
     - assets/images/USAns2.png
     - assets/images/USAns3.png

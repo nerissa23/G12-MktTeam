@@ -624,7 +624,7 @@ class Features extends StatelessWidget {
               SizedBox(height: 10),
               _buildStepWithImage(
                   '3. Student’s detail’s view page, click the “edit result” button to make changes to the student’s details.',
-                  'MSA3'),
+                  'MSA3.png'),
             ],
           ),
           SizedBox(height: 20),
