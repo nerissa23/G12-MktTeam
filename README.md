@@ -3,7 +3,7 @@
   <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li><a href="#introduction-">Introductions</a></li>
+    <li><a href="https://github.com/nerissa23/G12-MktTeam/blob/main/README.md#10-introduction">Introductions</a></li>
     <li><a href="#getting-started-">Getting Started</a></li>
     <li><a href="#features-">Features</a></li>
     <li><a href="#troubleshooting-">Troubleshooting</a></li>
