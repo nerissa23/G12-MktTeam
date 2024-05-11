@@ -434,6 +434,109 @@ class Features extends StatelessWidget {
             'Exam Creation',
             style: textStyle1,
           ),
+          const SizedBox(height: 10),
+          Column(
+            children: [
+              _buildStepWithImage(
+                  '1. Go to the exam management page.',
+                  ''),
+              SizedBox(height: 10),
+              _buildStepWithImage(
+                  '2. Click on the “Create” button to create a new examination/quiz.',
+                  ''),
+              SizedBox(height: 10),
+              _buildStepWithImage(
+                  '3. Enter the examination’s details and grading’s criteria.',
+                  ''),
+              _buildStepWithImage(
+                  '4. Scroll down to enter the answer scheme.',
+                  ''),
+              _buildStepWithImage(
+                  '5. Click the “save” button to create the examination record.',
+                  'USA4.png'),
+              SizedBox(height: 10),
+              _buildStepWithImage(
+                  '6. Exam Created.',
+                  ''),
+            ],
+          ),
+          SizedBox(height: 20),
+          Text(
+            'Edit Examination',
+            style: _textStyle1,
+          ),
+          const SizedBox(height: 10),
+          Column(
+            children: [
+              _buildStepWithImage(
+                  '1. Click on the “edit” icon on the specific exam.',
+                  ''),
+              SizedBox(height: 10),
+              _buildStepWithImage(
+                  '2. Directed into the edit exam page, enter the changes required.',
+                  ''),
+              SizedBox(height: 10),
+              _buildStepWithImage(
+                  '3. Scroll down and click the “save” button to apply the changes.',
+                  ''),
+            ],
+          ),
+          SizedBox(height: 20),
+          Text(
+            'Manage student’s answer',
+            style: _textStyle1,
+          ),
+          const SizedBox(height: 10),
+          Column(
+            children: [
+              _buildStepWithImage(
+                  '1. Click on the “eye” icon to view the exam’s details.',
+                  ''),
+              SizedBox(height: 10),
+              _buildStepWithImage(
+                  '2. Directed into the exam details page, click into the “eye” icon to view the student’s detail, “note” icon to edit the student’s details or “trash” icon to delete the student’s information.',
+                  ''),
+              SizedBox(height: 10),
+              _buildStepWithImage(
+                  '3. Student’s detail’s view page, click the “edit result” button to make changes to the student’s details.',
+                  ''),
+            ],
+          ),
+          SizedBox(height: 20),
+          Text(
+            'Upload Sample Answer',
+            style: _textStyle1,
+          ),
+          const SizedBox(height: 10),
+          Column(
+            children: [
+              _buildStepWithImage(
+                  '1. Click on the “eye” icon to view the exam’s details.',
+                  ''),
+              SizedBox(height: 10),
+              _buildStepWithImage(
+                  '2. Click on the “upload answer” button to upload the sample answer scheme.',
+                  ''),
+              SizedBox(height: 10),
+              _buildStepWithImage(
+                  '3. Directed into the answer scheme page, click the “+” icon to upload the sample answer scheme.',
+                  ''),
+              _buildStepWithImage(
+                  '4. Upload the answer scheme file.',
+                  ''),
+              _buildStepWithImage(
+                  '5. If you fail, try to upload another file of the answer scheme.',
+                  ''),
+              SizedBox(height: 10),
+              _buildStepWithImage(
+                  '6. Wait for the file to be processed.',
+                  ''),
+              SizedBox(height: 10),
+              _buildStepWithImage(
+                  '7. Click the “confirm” button to apply the answer scheme.',
+                  ''),
+            ],
+          ),
           SizedBox(height: 20),
           Text(
             'Upload Student Answer',
