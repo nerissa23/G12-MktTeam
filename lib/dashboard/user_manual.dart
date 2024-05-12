@@ -24,6 +24,17 @@ class _UserManualState extends State<UserManual> {
     'Best Practices': GlobalKey(),
     'Glossary': GlobalKey(),
     'FAQ': GlobalKey(),
+
+    // // Aliases
+    // 'requirements': GlobalKey(),
+    // 'os': GlobalKey(),
+    // 'installation': GlobalKey(),
+    // 'setup': GlobalKey(),
+    // 'navigation': GlobalKey(),
+    // 'exam': GlobalKey(),
+    // 'answer': GlobalKey(),
+    // 'support': GlobalKey(),
+    // 'tips': GlobalKey(),
   };
 
   @override
@@ -54,7 +65,8 @@ class _UserManualState extends State<UserManual> {
   void _updateSearchResults(String query) {
     setState(() {
       _searchResults = _filterSections(query);
-      _showSearchResults = _searchController.text.isNotEmpty && _searchResults.isNotEmpty;
+      _showSearchResults =
+          _searchController.text.isNotEmpty && _searchResults.isNotEmpty;
     });
   }
 
@@ -84,7 +96,52 @@ class _UserManualState extends State<UserManual> {
           filteredSections.add(section);
         }
       }
+
+      _aliasToSection(section, filteredSections, query);
+
+      // if (_isAlias(section) && section.toLowerCase().contains(query)) {
+      //   _aliasToSection(section, filteredSections, query);
+      // }
     });
+
+    return filteredSections;
+  }
+
+  // bool _isAlias(String section) {
+  //   return ['requirements', 'os', 'installation', 'setup', 'navigation', 'exam', 'answer', 'support', 'tips'].contains(section.toLowerCase());
+  // }
+
+  List<String> _aliasToSection(section, filteredSections, query) {
+    switch (query) {
+      case 'requirements':
+      case 'os':
+      case 'install':
+      case 'installation':
+      case 'setup':
+      case 'navigation':
+        if (!filteredSections.contains('Getting Started')) {
+          filteredSections.add('Getting Started');
+        }
+        break;
+      case 'exam':
+      case 'answer':
+        if (!filteredSections.contains('Features')) {
+          filteredSections.add('Features');
+        }
+        break;
+      case 'support':
+        if (!filteredSections.contains('Troubleshooting')) {
+          filteredSections.add('Troubleshooting');
+        }
+        break;
+      case 'tips':
+        if (!filteredSections.contains('Best Practices')) {
+          filteredSections.add('Best Practices');
+        }
+        break;
+      default:
+        break;
+    }
 
     return filteredSections;
   }
@@ -113,7 +170,8 @@ class _UserManualState extends State<UserManual> {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector( // GestureDetector to detect taps outside the search container
+    return GestureDetector(
+      // GestureDetector to detect taps outside the search container
       onTap: () {
         FocusScope.of(context).unfocus(); // Unfocus text field
         _hideSearchResults(); // Hide search results
@@ -158,7 +216,8 @@ class _UserManualState extends State<UserManual> {
                                 _hideSearchResults(); // Hide search results after tapping section
                               },
                               child: Padding(
-                                padding: const EdgeInsets.symmetric(vertical: 5.0),
+                                padding:
+                                    const EdgeInsets.symmetric(vertical: 5.0),
                                 child: Text(section),
                               ),
                             );
@@ -562,9 +621,7 @@ class Features extends StatelessWidget {
           const SizedBox(height: 10),
           Column(
             children: [
-              _buildStepWithImage(
-                  '1. Go to the exam management page.',
-                  ''),
+              _buildStepWithImage('1. Go to the exam management page.', ''),
               SizedBox(height: 10),
               _buildStepWithImage(
                   '2. Click on the “Create” button to create a new examination/quiz.',
@@ -574,15 +631,12 @@ class Features extends StatelessWidget {
                   '3. Enter the examination’s details and grading’s criteria.',
                   'EC2.png'),
               _buildStepWithImage(
-                  '4. Scroll down to enter the answer scheme.',
-                  'EC3.png'),
+                  '4. Scroll down to enter the answer scheme.', 'EC3.png'),
               _buildStepWithImage(
                   '5. Click the “save” button to create the examination record.',
                   ''),
               SizedBox(height: 10),
-              _buildStepWithImage(
-                  '6. Exam Created.',
-                  ''),
+              _buildStepWithImage('6. Exam Created.', ''),
             ],
           ),
           SizedBox(height: 20),
@@ -647,15 +701,13 @@ class Features extends StatelessWidget {
                   '3. Directed into the answer scheme page, click the “+” icon to upload the sample answer scheme.',
                   'USAns3.png'),
               _buildStepWithImage(
-                  '4. Upload the answer scheme file.',
-                  'USAns4.png'),
+                  '4. Upload the answer scheme file.', 'USAns4.png'),
               _buildStepWithImage(
                   '5. If you fail, try to upload another file of the answer scheme.',
                   'USAns5.png'),
               SizedBox(height: 10),
               _buildStepWithImage(
-                  '6. Wait for the file to be processed.',
-                  'USAns6.png'),
+                  '6. Wait for the file to be processed.', 'USAns6.png'),
               SizedBox(height: 10),
               _buildStepWithImage(
                   '7. Click the “confirm” button to apply the answer scheme.',
