@@ -87,12 +87,13 @@ flutter:
     - assets/images/reg1.png
     - assets/images/reg2.png
     - assets/images/reg3.png
-    - assets/images/tip1.png
-    - assets/images/tip2.png
-    - assets/images/tip3.png
-    - assets/images/tip4.png
-    - assets/images/tip5.png
-    - assets/images/tip6.png
+    - assets/images/tip0.jpg
+    - assets/images/tip1.jpg
+    - assets/images/tip2.jpg
+    - assets/images/tip3.jpg
+    - assets/images/tip4.jpg
+    - assets/images/tip5.jpg
+    - assets/images/tip6.jpg
     - assets/images/USA1.png
     - assets/images/USA2.png
     - assets/images/USA3.png

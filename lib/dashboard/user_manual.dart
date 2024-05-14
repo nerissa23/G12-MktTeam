@@ -1101,7 +1101,7 @@ class BestPractices extends StatelessWidget {
           PracticeItem(
             description:
                 '6. For best OCR text extraction, use white blank paper only instead of foolscap paper or grid-lined paper.',
-            imagePath: 'assets/images/tip0.png',
+            imagePath: 'assets/images/tip0.jpg',
           ),
         ],
       ),
@@ -1111,17 +1111,17 @@ class BestPractices extends StatelessWidget {
           PracticeItem(
             description:
                 '1. Ensure students format answers consistently and legibly to aid OCR accuracy.',
-            imagePath: 'assets/images/tip1.png',
+            imagePath: 'assets/images/tip1.jpg',
           ),
           PracticeItem(
             description:
                 '2. Advise clear separation of answers for each question to minimize ambiguity.',
-            imagePath: 'assets/images/tip2.png',
+            imagePath: 'assets/images/tip2.jpg',
           ),
           PracticeItem(
             description:
                 '3. Caution against overlapping answers to enhance OCR interpretation.',
-            imagePath: 'assets/images/tip3.png',
+            imagePath: 'assets/images/tip3.jpg',
           ),
           PracticeItem(
             description:
@@ -1134,12 +1134,12 @@ class BestPractices extends StatelessWidget {
           PracticeItem(
             description:
                 '6. Ensure students use dark, bold pens or pencils for writing to improve OCR readability.',
-            imagePath: 'assets/images/tip4.png',
+            imagePath: 'assets/images/tip4.jpg',
           ),
           PracticeItem(
             description:
                 '7. Remind students to avoid excessive use of decorative elements or symbols that may interfere with OCR recognition.',
-            imagePath: 'assets/images/tip5.png',
+            imagePath: 'assets/images/tip5.jpg',
           ),
           PracticeItem(
             description:
@@ -1152,7 +1152,7 @@ class BestPractices extends StatelessWidget {
           PracticeItem(
             description:
                 '10. Recommend students to use a ruler or straight edge for neat alignment of answers to improve OCR alignment.',
-            imagePath: 'assets/images/tip6.png',
+            imagePath: 'assets/images/tip6.jpg',
           ),
         ],
       ),
