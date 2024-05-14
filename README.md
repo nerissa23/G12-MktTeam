@@ -406,8 +406,9 @@ interfere with OCR recognition.
 <p align="center">
   <img width="40%" src="assets/images/tip5.jpg">
 </p>
+
 8. Provide guidelines for students to write numbers and symbols clearly, especially those
-prone to misinterpretation
+prone to misinterpretation.
 9. Advise against folding or creasing answer sheets, as it can distort text and hinder OCR
 accuracy.
 10. Recommend students to use a ruler or straight edge for neat alignment of answers to
