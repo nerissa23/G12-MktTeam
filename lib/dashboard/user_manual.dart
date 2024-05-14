@@ -24,17 +24,6 @@ class _UserManualState extends State<UserManual> {
     'Best Practices': GlobalKey(),
     'Glossary': GlobalKey(),
     'FAQ': GlobalKey(),
-
-    // // Aliases
-    // 'requirements': GlobalKey(),
-    // 'os': GlobalKey(),
-    // 'installation': GlobalKey(),
-    // 'setup': GlobalKey(),
-    // 'navigation': GlobalKey(),
-    // 'exam': GlobalKey(),
-    // 'answer': GlobalKey(),
-    // 'support': GlobalKey(),
-    // 'tips': GlobalKey(),
   };
 
   @override
@@ -98,18 +87,10 @@ class _UserManualState extends State<UserManual> {
       }
 
       _aliasToSection(section, filteredSections, query);
-
-      // if (_isAlias(section) && section.toLowerCase().contains(query)) {
-      //   _aliasToSection(section, filteredSections, query);
-      // }
     });
 
     return filteredSections;
   }
-
-  // bool _isAlias(String section) {
-  //   return ['requirements', 'os', 'installation', 'setup', 'navigation', 'exam', 'answer', 'support', 'tips'].contains(section.toLowerCase());
-  // }
 
   List<String> _aliasToSection(section, filteredSections, query) {
     switch (query) {
@@ -171,7 +152,7 @@ class _UserManualState extends State<UserManual> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      // GestureDetector to detect taps outside the search container
+      // GestureDetector is to detect taps outside the search container
       onTap: () {
         FocusScope.of(context).unfocus(); // Unfocus text field
         _hideSearchResults(); // Hide search results
@@ -333,7 +314,6 @@ class Introduction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      key: key,
       padding: EdgeInsets.all(24.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -376,7 +356,6 @@ class GettingStarted extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      key: key,
       padding: EdgeInsets.all(24.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -415,7 +394,7 @@ class GettingStarted extends StatelessWidget {
             '- ChromeOS.',
             style: _textStyle2,
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 25),
           Text(
             'Installation Steps',
             style: _textStyle1,
@@ -447,14 +426,14 @@ class GettingStarted extends StatelessWidget {
           ),
 
           // Account Setup
-          const SizedBox(height: 20),
+          const SizedBox(height: 25),
           Text(
             'Account Setup',
             style: _textStyle1,
           ),
 
           // Register
-          const SizedBox(height: 15),
+          const SizedBox(height: 10),
           Text(
             'i. Register',
             style: _textStyle1,
@@ -466,7 +445,7 @@ class GettingStarted extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           Image.asset(
-            'images/reg1.png',
+            'assets/images/reg1.png',
           ),
           Text(
             '\n\t\t2. If you have not set up an account before, click the “Don’t have an account? Register here” button. If you have already registered an account, go to Login.',
@@ -474,7 +453,7 @@ class GettingStarted extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           Image.asset(
-            'images/reg2.png',
+            'assets/images/reg2.png',
           ),
           Text(
             '\n\t\t3. You will be asked to give your email and password that you intend to use. Upon completing the registration, you will have to enter your password once again for confirmation.',
@@ -482,7 +461,7 @@ class GettingStarted extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           Image.asset(
-            'images/reg3.png',
+            'assets/images/reg3.png',
           ),
           Text(
             '\n\t\t4. Click the “Register” button once you have filled up the required information for registration.',
@@ -490,35 +469,35 @@ class GettingStarted extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           Text(
-            '\t\t5. You will be redirected to the Login if you have registered successfully.',
+            '\t\t5. You will be redirected to the Login page if you have registered successfully.',
             style: _textStyle2,
           ),
 
           //Login
-          const SizedBox(height: 15),
+          const SizedBox(height: 20),
           Text(
             'ii. Login',
             style: _textStyle1,
           ),
           const SizedBox(height: 10),
           Text(
-            '\t\t1. In the Login page, fill in your email or username and password then click on the “Log in” button.',
+            '\t\t1. In the Login page, fill in your email and password then click on the “Log in” button.',
             style: _textStyle2,
           ),
           const SizedBox(height: 20),
           Image.asset(
-            'images/login1.png',
+            'assets/images/login1.png',
             height: 400,
           ),
           Text(
-            '\n\t\t2. If you have forgotten your password and wish to create a new one, proceed to Forget Password.',
+            '\n\t\t2. If you have forgotten your password and wish to create a new one, proceed to Forgot Password.',
             style: _textStyle2,
           ),
 
           // Forget Password
-          const SizedBox(height: 15),
+          const SizedBox(height: 20),
           Text(
-            'iii. Forget Password',
+            'iii. Forgot Password',
             style: _textStyle1,
           ),
           const SizedBox(height: 10),
@@ -528,7 +507,7 @@ class GettingStarted extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           Image.asset(
-            'images/reg2.png',
+            'assets/images/reg2.png',
           ),
           Text(
             '\n\t\t2. Enter your registered email address to receive a password reset link to change your password.',
@@ -536,7 +515,7 @@ class GettingStarted extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           Image.asset(
-            'images/forgetpass2.png',
+            'assets/images/forgetpass2.png',
             height: 400,
           ),
           Text(
@@ -545,12 +524,12 @@ class GettingStarted extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           Image.asset(
-            'images/forgetpass3.png',
+            'assets/images/forgetpass3.png',
             height: 400,
           ),
 
           //LogOut
-          const SizedBox(height: 15),
+          const SizedBox(height: 20),
           Text(
             'iv. Logout',
             style: _textStyle1,
@@ -562,7 +541,7 @@ class GettingStarted extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           Image.asset(
-            'images/homepage.png',
+            'assets/images/homepage.png',
             width: 700,
           ),
           Text(
@@ -576,7 +555,7 @@ class GettingStarted extends StatelessWidget {
             style: _textStyle1,
           ),
           Image.asset(
-            'images/nav.png',
+            'assets/images/nav.png',
             width: 700,
           ),
           const SizedBox(height: 10),
@@ -604,7 +583,6 @@ class Features extends StatelessWidget {
     final TextStyle textStyle2 = TextStyle(fontSize: 14);
 
     return Container(
-      key: key,
       padding: EdgeInsets.all(24.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -613,7 +591,7 @@ class Features extends StatelessWidget {
             'Features',
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
           ),
-          SizedBox(height: 20),
+          SizedBox(height: 10),
           Text(
             'Exam Creation',
             style: textStyle1,
@@ -621,22 +599,22 @@ class Features extends StatelessWidget {
           const SizedBox(height: 10),
           Column(
             children: [
-              _buildStepWithImage('1. Go to the exam management page.', ''),
+              _buildStepWithImage('1. Go to the Exam page.', ''),
               SizedBox(height: 10),
               _buildStepWithImage(
                   '2. Click on the “Create” button to create a new examination/quiz.',
                   'EC1.png'),
-              SizedBox(height: 10),
+              SizedBox(height: 15),
               _buildStepWithImage(
-                  '3. Enter the examination’s details and grading’s criteria.',
+                  '3. Enter the examination’s details and grading criteria.',
                   'EC2.png'),
               _buildStepWithImage(
                   '4. Scroll down to enter the answer scheme.', 'EC3.png'),
               _buildStepWithImage(
                   '5. Click the “save” button to create the examination record.',
                   ''),
-              SizedBox(height: 10),
-              _buildStepWithImage('6. Exam Created.', ''),
+              SizedBox(height: 15),
+              _buildStepWithImage('6. The examination record is successfully created.', ''),
             ],
           ),
           SizedBox(height: 20),
@@ -647,17 +625,40 @@ class Features extends StatelessWidget {
           const SizedBox(height: 10),
           Column(
             children: [
+              _buildStepWithImage('1. Go to the Exam page.', ''),
+              SizedBox(height: 10),
               _buildStepWithImage(
-                  '1. Click on the “edit” icon on the specific exam.',
+                  '2. Click on the “edit” icon for the specific exam to be edited.',
                   'EE1.png'),
-              SizedBox(height: 10),
+              SizedBox(height: 15),
               _buildStepWithImage(
-                  '2. Directed into the edit exam page, enter the changes required.',
+                  '3. Enter the changes required in the Edit Exam page.',
                   'EE2.png'),
+              SizedBox(height: 15),
+              _buildStepWithImage(
+                  '4. Scroll down and click the “save” button to apply the changes.',
+                  ''),
+            ],
+          ),
+          SizedBox(height: 20),
+          Text(
+            'View Exam\'s Details',
+            style: textStyle1,
+          ),
+          const SizedBox(height: 10),
+          Column(
+            children: [
+              _buildStepWithImage(
+                  '1. Go to the Exam page',
+                  ''),
               SizedBox(height: 10),
               _buildStepWithImage(
-                  '3. Scroll down and click the “save” button to apply the changes.',
-                  ''),
+                  '2. Click on the “eye” icon for a specific exam to view the exam’s details..',
+                  'VED1.png'),
+              SizedBox(height: 10),
+              _buildStepWithImage(
+                  '3. You will be directed to the Exam Details page.',
+                  'VED2.png'),
             ],
           ),
           SizedBox(height: 20),
@@ -665,19 +666,24 @@ class Features extends StatelessWidget {
             'Manage student’s answer',
             style: textStyle1,
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 15),
           Column(
             children: [
+              _buildStepWithImage('1. Go to the Exam page.', ''),
+              SizedBox(height: 10),
               _buildStepWithImage(
-                  '1. Click on the “eye” icon to view the exam’s details.',
+                  '2. Click on the “eye” icon to view the exam’s details.',
                   'MSA1.png'),
-              SizedBox(height: 10),
+              SizedBox(height: 15),
               _buildStepWithImage(
-                  '2. Directed into the exam details page, click into the “eye” icon to view the student’s detail, “note” icon to edit the student’s details or “trash” icon to delete the student’s information.',
+                  '3. Once redirected into the Exam Details page, navigate to the list of students’ records and '
+                  'click on the “eye” icon to view the student’s details, “note” icon to edit the student\'s '
+                  'details or “trash” icon to delete the student\'s information',
                   'MSA2.png'),
-              SizedBox(height: 10),
+              SizedBox(height: 15),
               _buildStepWithImage(
-                  '3. Student’s detail’s view page, click the “edit result” button to make changes to the student’s details.',
+                  '4. On the Student’s Details page, click the “Edit Result” button to make changes to the '
+                  'student\'s details.',
                   'MSA3.png'),
             ],
           ),
@@ -689,28 +695,30 @@ class Features extends StatelessWidget {
           const SizedBox(height: 10),
           Column(
             children: [
+              _buildStepWithImage('1. Go to the Exam page.', ''),
+              SizedBox(height: 10),
               _buildStepWithImage(
-                  '1. Click on the “eye” icon to view the exam’s details.',
+                  '2. Click on the “eye” icon to view the exam’s details.',
                   'USAns1.png'),
-              SizedBox(height: 10),
+              SizedBox(height: 15),
               _buildStepWithImage(
-                  '2. Click on the “upload answer” button to upload the sample answer scheme.',
+                  '3. Click on the “Upload answer” button to upload the sample answer scheme.',
                   'USAns2.png'),
-              SizedBox(height: 10),
+              SizedBox(height: 15),
               _buildStepWithImage(
-                  '3. Directed into the answer scheme page, click the “+” icon to upload the sample answer scheme.',
+                  '4. Once redirected into the Answer Scheme page, click the “+” icon to upload the sample answer scheme.',
                   'USAns3.png'),
               _buildStepWithImage(
-                  '4. Upload the answer scheme file.', 'USAns4.png'),
+                  '5. Upload the answer scheme file.', 'USAns4.png'),
               _buildStepWithImage(
-                  '5. If you fail, try to upload another file of the answer scheme.',
+                  '6. If the image processing fails, try to upload another file with a clearer view of the answer scheme.',
                   'USAns5.png'),
-              SizedBox(height: 10),
+              SizedBox(height: 15),
               _buildStepWithImage(
-                  '6. Wait for the file to be processed.', 'USAns6.png'),
-              SizedBox(height: 10),
+                  '7. Wait for the file to be processed.', 'USAns6.png'),
+              SizedBox(height: 15),
               _buildStepWithImage(
-                  '7. Click the “confirm” button to apply the answer scheme.',
+                  '8. Click the “confirm” button to apply the answer scheme.',
                   'USAns8.png'),
             ],
           ),
@@ -722,37 +730,39 @@ class Features extends StatelessWidget {
           const SizedBox(height: 10),
           Column(
             children: [
+              _buildStepWithImage('1. Go to the Exam page.', ''),
+              SizedBox(height: 10),
               _buildStepWithImage(
-                  '1. Navigate to "Exams” and select the exam you wish to grade.',
+                  '2. Select the exam you wish to grade.',
                   'USA1.png'),
-              SizedBox(height: 10),
+              SizedBox(height: 15),
               _buildStepWithImage(
-                  '2. In the student column, locate and click the "Add" button to input student data.',
+                  '3. In the student column, locate and click the "Add" button to input student data.',
                   'USA2.png'),
-              SizedBox(height: 10),
+              SizedBox(height: 15),
               _buildStepWithImage(
-                  '3. Enter the student\'s ID and name into the designated fields.',
+                  '4. Enter the student\'s ID and name into the designated fields.',
                   ''),
               _buildStepWithImage(
-                  '4. Click the "Upload" button to update the student\'s answer sheet.',
+                  '5. Click the "Upload" button to update the student\'s answer sheet.',
                   'USA3.png'),
               _buildStepWithImage(
-                  '5. To add the student\'s answer sheet, either drag a file or use the "Choose files" option to select the file from your computer.',
+                  '6. To add the student\'s answer sheet, either drag a file or use the "Choose files" option to select the file from your computer.',
                   'USA4.png'),
-              SizedBox(height: 10),
+              SizedBox(height: 15),
               _buildStepWithImage(
-                  '6. After selecting a file, refer to Image Preprocessing for more details.',
+                  '7. After selecting a file, refer to Image Preprocessing for more details.',
                   'USA4.png'),
-              SizedBox(height: 10),
+              SizedBox(height: 15),
               _buildStepWithImage(
-                  '7. The student\'s details will be displayed on the page for confirmation.',
+                  '8. The student\'s details will be displayed on the page for confirmation.',
                   'USA5.png'),
-              SizedBox(height: 10),
+              SizedBox(height: 15),
               _buildStepWithImage(
-                  '8. Repeat steps 2 to 7 to add more students as necessary.',
+                  '9. Repeat steps 2 to 7 to add more students as necessary.',
                   ''),
               _buildStepWithImage(
-                  '9. Once you have finished adding all students, click the "Save" button to save the student records.',
+                  '10. Once you have finished adding all students, click the "Save" button to save the student records.',
                   ''),
             ],
           ),
@@ -767,7 +777,7 @@ class Features extends StatelessWidget {
               _buildStepWithImage(
                   '1. Once a file is selected for upload, the system will begin processing the image.',
                   'IP1.png'),
-              SizedBox(height: 10),
+              SizedBox(height: 15),
               Text(
                 '2. After successful processing, users are required to enter a file name for saving and the author\'s name. (In case of processing failure, refer to Troubleshooting for more info)',
                 style: textStyle2,
@@ -775,11 +785,11 @@ class Features extends StatelessWidget {
               _buildStepWithImage(
                   '3.  Click on "Extract this file" to initiate OCR processing.',
                   'IP2.png'),
-              SizedBox(height: 10),
+              SizedBox(height: 15),
               _buildStepWithImage(
                   '4. The system will commence extracting text from the image.',
                   'IP3.png'),
-              SizedBox(height: 10),
+              SizedBox(height: 15),
               _buildStepWithImage(
                   '5. Upon successful extraction, the extracted text (answers) will be displayed.',
                   ''),
@@ -796,7 +806,13 @@ class Features extends StatelessWidget {
           ),
           const SizedBox(height: 10),
           Text(
-            '1. Navigate to "Exam" and select the eye icon of the exam you wish to view.\n2. Upon uploading students\' answers, the system will automatically calculate the score for each student and calculate the mean and median score of the class. (Refer to Upload Student Answer to know more about uploading student’s answer)\n3. To generate a report, click on the "Generate Report" button. \n4. The report will include statistical measures such as the median, mean, and other relevant statistics.',
+            '1. Go to the Exam page.\n'
+            '2. Select the eye icon of the exam you wish to view.\n'
+            '3. Upon uploading students\' answers, the system will automatically calculate the score for each student and '
+            'calculate the mean and median score of the class. (Refer to Upload Student Answer to know more about uploading '
+            'student’s answer)\n'
+            '4. To generate a report, click on the "Generate Report" button. \n'
+            '5. The report will include statistical measures such as the median, mean, and other relevant statistics.',
             style: TextStyle(fontSize: 14),
           )
         ],
@@ -839,7 +855,6 @@ class Troubleshooting extends StatelessWidget {
     final TextStyle _textStyle2 = TextStyle(fontSize: 14);
 
     return Container(
-      key: key,
       padding: EdgeInsets.all(24.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -1212,7 +1227,6 @@ class Glossary extends StatelessWidget {
     final TextStyle _textStyle2 = TextStyle(fontSize: 14);
 
     return Container(
-      key: key,
       padding: EdgeInsets.all(24.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
