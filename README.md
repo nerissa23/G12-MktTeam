@@ -381,32 +381,31 @@ solutions, please contact our support team for assistance:</p>
 ### 5.2 Grading Tips
 1. Ensure students format answers consistently and legibly to aid OCR accuracy.
 <p align="center">
-  <img width="40%" src="https://github.com/WIF3002-OCR-MCQ/rajamark/assets/117422678/94b5a288-465d-4c08-9dd1-e049bdbaf3f7">
+  <img width="40%" src="assets/images/tip1.jpg">
 </p>
 
 2. Advise clear separation of answers for each question to minimize ambiguity.
 <p align="center">
-  <img width="40%" src="https://github.com/WIF3002-OCR-MCQ/rajamark/assets/117422678/4f3991b5-38f0-49f4-997e-fe8690089e31">
+  <img width="40%" src="assets/images/tip2.jpg">
 </p>
 
 3. Caution against overlapping answers to enhance OCR interpretation.
 <p align="center">
-  <img width="40%" src="https://github.com/WIF3002-OCR-MCQ/rajamark/assets/117422678/b571b39a-d102-407f-b5c0-0eabfb1a4f67">
+  <img width="40%" src="assets/images/tip3.jpg">
 </p>
 
 4. Scan answers at high resolution in well-lit conditions for optimal recognition.
 5. Encourage manual review of extracted text for clarity before submission.
 6. Ensure students use dark, bold pens or pencils for writing to improve OCR readability.
 <p align="center">
-  <img width="40%" src="https://github.com/WIF3002-OCR-MCQ/rajamark/assets/117422678/85174803-2eaa-41de-a491-3dcb6072e277">
+  <img width="40%" src="assets/images/tip4.jpg">
 </p>
 
 7. Remind students to avoid excessive use of decorative elements or symbols that may
 interfere with OCR recognition.
 <p align="center">
-  <img width="40%" src="https://github.com/WIF3002-OCR-MCQ/rajamark/assets/117422678/2a9bc8fc-ff90-44c1-aa21-f0606b4b39c5">
+  <img width="40%" src="assets/images/tip5.jpg">
 </p>
-
 8. Provide guidelines for students to write numbers and symbols clearly, especially those
 prone to misinterpretation
 9. Advise against folding or creasing answer sheets, as it can distort text and hinder OCR
@@ -414,7 +413,7 @@ accuracy.
 10. Recommend students to use a ruler or straight edge for neat alignment of answers to
 improve OCR alignment.
 <p align="center">
-  <img width="40%" src="https://github.com/WIF3002-OCR-MCQ/rajamark/assets/117422678/d883fc15-0c17-4c09-b5e8-e6d7a40761d7">
+  <img width="40%" src="assets/images/tip6.jpg">
 </p>
 
 ### Accuracy Recommendations
