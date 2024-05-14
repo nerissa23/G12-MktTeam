@@ -367,7 +367,18 @@ solutions, please contact our support team for assistance:</p>
 ---
 
 ## 5.0 Best Practices
-### 5.1 Grading Tips
+### 5.1 Student Answer Guidelines
+1. Student names and student IDs do not need to follow a specific order. Either one can be written first.
+2. The system will recognize student names and IDs after the colon (:) symbol. Avoid using other symbols such as arrows (->) or hyphens (-) before writing the name and ID.
+3. The phrases "Student Name" and "Student ID" are case-insensitive. You can write them as "sTuDeNt nAmE" or "sTUDENT ID", and the system will still recognize them.
+4. Student Name and Student ID must be written in a single line only.
+5. Student answers must be written in vertical format and each answer is separated by a new line.
+6. For best OCR text extraction, use white blank paper only instead of foolscap paper or grid-lined paper.
+<p align="center">
+  <img width="40%" src="https://github.com/WIF3002-OCR-MCQ/rajamark/assets/117422678/94b5a288-465d-4c08-9dd1-e049bdbaf3f7">
+</p>
+
+### 5.2 Grading Tips
 1. Ensure students format answers consistently and legibly to aid OCR accuracy.
 <p align="center">
   <img width="40%" src="https://github.com/WIF3002-OCR-MCQ/rajamark/assets/117422678/94b5a288-465d-4c08-9dd1-e049bdbaf3f7">
