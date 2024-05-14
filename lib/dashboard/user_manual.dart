@@ -653,6 +653,27 @@ class Features extends StatelessWidget {
                   ''),
               SizedBox(height: 10),
               _buildStepWithImage(
+                  '2. Click on the “eye” icon for a specific exam to view the exam’s details.',
+                  'VED1.png'),
+              SizedBox(height: 10),
+              _buildStepWithImage(
+                  '3. You will be directed to the Exam Details page.',
+                  'VED2.png'),
+            ],
+          ),
+          SizedBox(height: 20),
+          Text(
+            'View Exam\'s Details',
+            style: textStyle1,
+          ),
+          const SizedBox(height: 10),
+          Column(
+            children: [
+              _buildStepWithImage(
+                  '1. Go to the Exam page',
+                  ''),
+              SizedBox(height: 10),
+              _buildStepWithImage(
                   '2. Click on the “eye” icon for a specific exam to view the exam’s details..',
                   'VED1.png'),
               SizedBox(height: 10),
@@ -1054,6 +1075,36 @@ class BestPractices extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final List<BestPracticeItem> bestPractices = [
+      BestPracticeItem(
+        title: 'Student Answer Guidelines',
+        items: [
+          PracticeItem(
+            description:
+                '1. Student names and student IDs do not need to follow a specific order. Either one can be written first.',
+          ),
+          PracticeItem(
+            description:
+                '2. The system will recognize student names and IDs after the colon (:) symbol. Avoid using other symbols such as arrows (->) or hyphens (-) before writing the name and ID.',
+          ),
+          PracticeItem(
+            description:
+                '3. The phrases "Student Name" and "Student ID" are case-insensitive. You can write them as "sTuDeNt nAmE" or "sTUDENT ID", and the system will still recognize them.',
+          ),
+          PracticeItem(
+            description:
+                '4. Student Name and Student ID must be written in a single line only.',
+          ),
+          PracticeItem(
+            description:
+                '5. Student answers must be written in vertical format and each answer is separated by a new line.',
+          ),
+          PracticeItem(
+            description:
+                '6. For best OCR text extraction, use white blank paper only instead of foolscap paper or grid-lined paper.',
+            imagePath: 'assets/images/tip0.png',
+          ),
+        ],
+      ),
       BestPracticeItem(
         title: 'Grading Tips',
         items: [
