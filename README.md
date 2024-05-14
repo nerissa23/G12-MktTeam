@@ -375,7 +375,7 @@ solutions, please contact our support team for assistance:</p>
 5. Student answers must be written in vertical format and each answer is separated by a new line.
 6. For best OCR text extraction, use white blank paper only instead of foolscap paper or grid-lined paper.
 <p align="center">
-  <img width="40%" src="https://github.com/WIF3002-OCR-MCQ/rajamark/assets/117422678/94b5a288-465d-4c08-9dd1-e049bdbaf3f7">
+  <img width="40%" src="assets/images/tip0.jpg">
 </p>
 
 ### 5.2 Grading Tips
