@@ -106,7 +106,7 @@ password.
 1. After successfully logged in, you will now see the Homepage (dashboard page) like the
 picture below:
 <p align="center">
-  <img width="60%" src="https://github.com/WIF3002-OCR-MCQ/rajamark/assets/117422678/47767192-0e4b-4d4f-8a90-b56ec0c38d1e">
+  <img width="60%" src="https://github.com/nerissa23/G12-MktTeam/blob/main/assets/images/homepage.png">
 </p>
 
 2. If you wish to log out, navigate to the navigation bar located at the leftmost of the screen
