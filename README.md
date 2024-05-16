@@ -122,16 +122,12 @@ and click on the “LogOut” button. You will then be redirected to the Login p
 <p align="justify">The Exam Page contains all exams that have been created. The exams can be edited or
 deleted from this table. The date of creation will also be displayed on this page. It is also
 possible to create a new exam from this page.</p>
-   
-2. Account Page
-<p align="justify">The Account Page will display the user’s information. Users will also be able to check
-and manage their account subscription on this page.</p>
 
-3. User Manual Page
+2. User Manual Page
 <p align="justify">The User Manual Page contains the documentation of the user manual that provides
 detailed instructions on how to use this system effectively.</p>
 
-4. LogOut
+3. LogOut
 <p align="justify">Navigate to the navigation bar located at the leftmost of the screen and click on the
 “LogOut” button if you wish to log out from your account.</p>
 
