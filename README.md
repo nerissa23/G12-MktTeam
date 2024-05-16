@@ -115,7 +115,7 @@ and click on the “LogOut” button. You will then be redirected to the Login p
 ### 2.4 Navigation
 
 <p align="center">
-  <img width="60%" src="https://github.com/WIF3002-OCR-MCQ/rajamark/assets/117422678/e3aa6264-99ac-4142-8254-c11b9b48664a">
+  <img width="60%" src="https://github.com/nerissa23/G12-MktTeam/blob/main/assets/images/nav.png">
 </p>
 
 1. Exam Page
